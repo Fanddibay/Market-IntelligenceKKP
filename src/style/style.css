@@ -48,7 +48,7 @@ h1 {
 
 /* hero */
 .hero {
-  background-image: url("assets/hero.png") !important;
+  background-image: url("/assets/hero.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
