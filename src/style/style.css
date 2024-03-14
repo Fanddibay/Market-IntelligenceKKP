@@ -204,7 +204,7 @@ table thead.bg-green {
 }
 /* ebook */
 .ebook .bg-ebook {
-  background-image: url("assets/ebook.png");
+  background-image: url("/assets/ebook.png");
   width: 23%;
   /* height: 500px !important; */
   background-size: 100% 100% !important;
