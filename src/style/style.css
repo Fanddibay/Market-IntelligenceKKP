@@ -204,12 +204,13 @@ table thead.bg-green {
 }
 /* ebook */
 .ebook .bg-ebook {
-  background-image: url("/assets/ebook.png");
+  background-image: url("assets/ebook.png");
   width: 23%;
   /* height: 500px !important; */
   background-size: 100% 100% !important;
   background-repeat: no-repeat;
   height: 344px !important;
+  border-radius: 16px !important;
 }
 
 .ebook h5 {
@@ -227,7 +228,7 @@ table thead.bg-green {
 }
 
 .ebook .ebookContent:hover {
-  border-radius: 16px;
+  border-radius: 20px !important;
   transition: 5ms ease-in-out;
   box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
 
