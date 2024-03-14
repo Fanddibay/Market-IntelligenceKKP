@@ -48,7 +48,7 @@ h1 {
 
 /* hero */
 .hero {
-  background-image: url("/src/assets/hero.png") !important;
+  background-image: url("/assets/hero.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -197,7 +197,7 @@ table thead.bg-green {
 }
 /* ebook */
 .ebook .bg-ebook {
-  background-image: url(/src/assets/ebook.png);
+  background-image: url("/assets/ebook.png");
   width: 261px !important;
   height: 344px !important;
 }
@@ -245,7 +245,7 @@ footer p {
 /* ! Artikel css */
 /* hero css */
 .heroArtikel {
-  background-image: url("/src/assets/backgroundArtikel.png") !important;
+  background-image: url("/assets/backgroundArtikel.png") !important;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
