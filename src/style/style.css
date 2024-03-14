@@ -93,14 +93,13 @@ h1 {
 
 .komoditasTranslate {
   width: 85% !important;
-  height: 200px !important;
+  height: 50% !important;
   padding: 0 24px !important;
 }
 
 .komoditas .komoditasTitle:hover .komoditasTranslate {
   opacity: 1;
   transform: translateY(0);
-  margin-bottom: 30% !important;
 }
 
 .komoditas .komoditasTitle h5 {
