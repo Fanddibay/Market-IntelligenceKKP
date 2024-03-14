@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <!-- link bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!-- slick css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid px-25">
+        <a class="navbar-brand me-5" href="#">
+          <img src="/src/assets/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown"
+                aria-controls="navbarNavDarkDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#komoditas"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Komoditas
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Another action</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#"
+                          >Something else here</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artikel">Artikel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#statistik">Statistik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ebook">E-Book</a>
+            </li>
+          </ul>
+          <a
+            class="navbar-text text-login fs-4 fw-bold text-decoration-none"
+            href="#"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- hero -->
+    <section>
+      <div class="hero">
+        <div class="container">
+          <h1 class="fw-bold text-black mb-4 hero-text">
+            Discover How We Can <br />
+            Elevate Your
+            <span class="">Exports</span>
+          </h1>
+          <a href="#komoditas" class="btn btn-lg btn-darkblue"
+            >Get Started
+            <span class="ms-1"
+              ><i class="fa-solid fa-arrow-right text-white"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- end hero -->
+
+    <!-- komoditas -->
+    <section class="komoditas" id="komoditas">
+      <div class="px-25">
+        <h5>Komoditas</h5>
+        <div class="row">
+          <div class="col">
+            <!-- Markup untuk carousel -->
+            <div class="slick-carousel">
+              <div class="komoditasTitle position-relative">
+                <div class="position-absolute bottom-0 pb-4">
+                  <div class="komoditasTranslate mb-3">
+                    <h5 class="mb-3">Nila</h5>
+                    <p class="">
+                      Indonesia sebagai negara kepulauan dengan perairan yang
+                      kaya akan sumber daya alam, memiliki potensi ekspor
+                      udang yang sangat menjanjikan.
+                    </p>
+                    <div class="text-end">
+                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="/src/assets/komoditas1.png" alt="" />
+              </div>
+              <div class="komoditasTitle position-relative">
+                <div class="position-absolute bottom-0 pb-4">
+                  <div class="komoditasTranslate mb-3">
+                    <h5 class="mb-3">Udang</h5>
+                    <p class="">
+                      Indonesia sebagai negara kepulauan dengan perairan yang
+                      kaya akan sumber daya alam, memiliki potensi ekspor
+                      udang yang sangat menjanjikan.
+                    </p>
+                    <div class="text-end">
+                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="/src/assets/komoditas2.png" alt="" />
+              </div>
+              <div class="komoditasTitle position-relative">
+                <div class="position-absolute bottom-0 pb-4">
+                  <div class="komoditasTranslate mb-3">
+                    <h5 class="mb-3">Tuna</h5>
+                    <p class="">
+                      Indonesia sebagai negara kepulauan dengan perairan yang
+                      kaya akan sumber daya alam, memiliki potensi ekspor
+                      udang yang sangat menjanjikan.
+                    </p>
+                    <div class="text-end">
+                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="/src/assets/komoditas3.png" alt="" />
+              </div>
+              <div class="komoditasTitle position-relative">
+                <div class="position-absolute bottom-0 pb-4">
+                  <div class="komoditasTranslate mb-3">
+                    <h5 class="mb-3">Udang</h5>
+                    <p class="">
+                      Indonesia berhasil memasok lebih dari 16% total produksi
+                      dunia dengan rata-rata produksi tuna, cakalang dan tongkol
+                      Indonesia mencapai lebih dari 1,2 juta ton/tahun
+                    </p>
+                    <div class="text-end">
+                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="/src/assets/komoditas2.png" alt="" />
+              </div>
+              <div class="komoditasTitle position-relative">
+                <div class="position-absolute bottom-0 pb-4">
+                  <div class="komoditasTranslate mb-3">
+                    <h5 class="mb-3">Nila</h5>
+                    <p class="">
+                      Indonesia adalah negara terbesar kelima di dunia yang
+                      mengekspor produk ikan nila di pasar global.
+                    </p>
+                    <div class="text-end">
+                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="/src/assets/komoditas2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end komoditas -->
+
+    <!-- artikel -->
+    <section class="artikel mt-5" id="artikel">
+      <div class="px-25">
+        <h5>Artikel</h5>
+        <p>Artikel Terkait Ekspor di Indonesia</p>
+        <div class="row">
+          <div class="col-4">
+            <a href="artikelDetail.html" class="text-decoration-none">
+              <div class="card py-1">
+                <img
+                  src="/src/assets/artikel1.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-black">
+                    Ekspor Indonesia Terus Melanjutkan Kinerja Positif
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card py-1">
+                <img
+                  src="/src/assets/artikel7.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-black">
+                    Infografis Market Review Untuk Komoditas Tuna
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card py-1" style="width: 18rem">
+                <img
+                  src="/src/assets/artikel3.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title text-black">
+                    RI Bakal Ekspor Pangan Dalam 4 TahunMendatang
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card py-1 text-black">
+                <img
+                  src="/src/assets/artikel4.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Revisi Aturan Ekspor Segera Diteken
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card py-1 text-black">
+                <img
+                  src="/src/assets/artikel5.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Satgas Bentukan Airlangga Tetapkan 12 Negara Prioritas
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="#" class="text-decoration-none">
+              <div class="card py-1 text-black">
+                <img
+                  src="/src/assets/artikel6.png"
+                  class="card-img-top p-3"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Ekspor RI ke AS & China Anjlok , Eropa Naik Tipis
+                  </h5>
+                  <p class="card-text mt-2">
+                    Ekspor Indonesia terus melanjutkan kinerja positif. Di bulan
+                    Oktober 2022, ekspor tercatat sebesar US$24,81 miliar atau
+                    tumbuh sebesar 12,3% (yoy)
+                  </p>
+                  <div class="linkHover text-end justify-content-end mt-3">
+                    <img src="/src/assets/link.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="artikel.html" class="btn btn-sm btn-darkblue px-3 py-1"
+            >Lihat Selengkapnya
+            <span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- end artikel -->
+
+    <!-- tabel informasi -->
+    <section class="data" id="statistik">
+      <div class="px-25">
+        <h5>Data & Informasi</h5>
+        <p>Grafik dan Tabel Data Nilai Ekspor Terkini</p>
+        <div class="justify-content-end d-flex mb-3">
+          <div class="d-flex gap-3">
+            <button class="btn btn-darkblue">Ekspor</button>
+            <div class="dropdown">
+              <a
+                class="btn btn-green dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Udang
+              </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-data">
+          <!-- table -->
+          <table class="table mt-4">
+            <thead class="bg-green table-striped">
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Januari 2024 (*)</th>
+                <th class="text-end">Januari - Februari 2024 (*)</th>
+                <th></th>
+              </tr>
+              <tr class="border-3 border-bottom border-dark">
+                <th scope="col">Uraian</th>
+                <th scope="col">Milyar (US$)</th>
+                <th scope="col">MoM (%)</th>
+                <th scope="col">Milyar (US$)</th>
+                <th scope="col">YoY (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">EKSPOR</th>
+                <td>
+                  20.53 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>
+                  -8.34 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>
+                  @20.53
+                  <span><img src="/src/assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>
+                  -8.34
+                  <span><img src="/src/assets/IconDown.png" alt="" /></span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Udang</th>
+                <td>20.53</td>
+                <td>
+                  -8.34 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>@20.53</td>
+                <td>-8.34</td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Tuna</th>
+                <td>
+                  20.53 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>-8.34</td>
+                <td>
+                  @20.53
+                  <span><img src="/src/assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>
+                  -8.34 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Nila</th>
+                <td>
+                  20.53
+                  <span><img src="/src/assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>
+                  -8.34 <span><img src="/src/assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>
+                  @20.53
+                  <span><img src="/src/assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>-8.34</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="justify-content-around text-end mt-5 text-justify">
+            <p class="infoData">
+              <span class="fw-bold">Sumber :</span> BPS, diolah Pusat Data dan
+              Sistem Informasi Kementerian Perdagangan
+            </p>
+            <p class="infoData">
+              <span class="fw-bold">Keterangan :</span> <span>(*)</span> Angka
+              Sementara
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end tabel informasi -->
+
+    <!-- e-book -->
+    <section class="ebook mt-5" id="ebook">
+      <div class="px-25">
+        <h5>E-BOOK</h5>
+        <p>E-Book Data Ekspor Terbaru</p>
+        <div class="row mt-4 justify-content-between">
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Januari 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Febuari 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Maret 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">April 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-between">
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Mei 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Juni 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Juli 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto bg-ebook position-relative ebookContent">
+            <div class="text-white mb-4">
+              <div
+                class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
+              >
+                <img src="/src/assets/read.png" alt="" />
+              </div>
+              <div class="position-absolute bottom-0 pb-3">
+                <p class="fw-bold">Agustus 2024</p>
+                <span>Laporan ekspor bulanan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="artikelDetail.html" class="btn btn-sm btn-darkblue px-3 py-1"
+            >Lihat Selengkapnya
+            <span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- end e-book -->
+
+    <!-- footer -->
+    <footer class="px-25 py-3 mt-5">
+      <div>
+        <div class="d-flex gap-4">
+          <img src="/src/assets/logoKemendagri.png" alt="" />
+          <img src="/src/assets/logoSimple.png" alt="" />
+        </div>
+        <div class="justify-content-between d-flex mt-4">
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Et lorem aliquam urna
+              faucibus <br />
+              molestie. Eu ipsum aenean sociis consequat fringilla. Adipiscing
+              orci risus lacus <br />
+              felis neque sit. Egestas nulla tristique est consequat risus sit
+              sapien ullamcorper.
+            </p>
+          </div>
+
+          <div class="d-flex gap-4">
+            <img src="/src/assets/facebook.svg" alt="" />
+            <img src="/src/assets/twitter.svg" alt="" />
+            <img src="/src/assets/Instagram.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="justify-content-between d-flex mt-5">
+        <div class="d-flex gap-4">
+          <div class="d-flex gap-2">
+            <img src="/src/assets/phone.svg" alt="" />
+            <p>Telepon: (021)</p>
+          </div>
+          <div class="d-flex gap-2">
+            <img src="/src/assets/mail.svg" alt="" />
+            <p>Layanan Kontak Kami</p>
+          </div>
+        </div>
+        <div class="d-flex gap-4">
+          <div class="d-flex gap-2">
+            <img src="/src/assets/database.svg" alt="" />
+            <p>Data & Informasi</p>
+          </div>
+          <div class="d-flex gap-2">
+            <img src="/src/assets/faq.svg" alt="" />
+            <p>FAQ</p>
+          </div>
+          <div class="d-flex gap-2">
+            <img src="/src/assets/callcenter.svg" alt="" />
+            <p>Help Center (HERO)</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        © Hak Cipta 2024 <span class="fw-bold">Smart Market Analysis</span>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- fontawesome js -->
+
+    <script
+      src="https://kit.fontawesome.com/9abdef5e4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- slick js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- link bootstrap js -->
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/src/index.js"></script>
+  </body>
+</html>

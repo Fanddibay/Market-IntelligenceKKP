@@ -1,0 +1,19 @@
+/* add main color here to easy change all color */
+
+:root {
+  --heading-1: #103956;
+  --heading-2: #103956;
+  --text-blue: #2c338d;
+  --text-grey: #6c757d;
+  --text-black: #081c2b;
+  --btn-primary: #103956;
+  --bg-table: #e7f4a4;
+  --footer: #2c338d;
+
+  /* font size */
+  --text-heading: 45px;
+  --text-h1: 35px;
+  --text-h2: 25px;
+  --text-h3: 20px;
+  --text-p: 15px;
+}
