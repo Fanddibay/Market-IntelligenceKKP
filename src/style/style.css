@@ -100,7 +100,7 @@ h1 {
 .komoditas .komoditasTitle:hover .komoditasTranslate {
   opacity: 1;
   transform: translateY(0);
-  margin-bottom: 55px !important;
+  margin-bottom: 30% !important;
 }
 
 .komoditas .komoditasTitle h5 {
