@@ -30,6 +30,21 @@ table thead tr th {
   border-radius: 50%;
 }
 
+/* slick style */
+button.slick-arrow {
+  background-color: blue !important;
+  color: blue !important;
+  border-radius: 500px !important;
+  padding: 1px 1px 1px 0px;
+  align-self: center !important;
+  text-align: center !important;
+  align-items: center !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #2072ac !important;
+}
 .text-justify {
   text-align: justify !important;
 }
@@ -385,21 +400,7 @@ table thead tr th {
     font-size: var(--text-h3) !important;
     color: #fff;
   }
-  /* slick style */
-  button.slick-arrow {
-    background-color: blue !important;
-    color: blue !important;
-    border-radius: 500px !important;
-    padding: 1px 1px 1px 0px;
-    align-self: center !important;
-    text-align: center !important;
-    align-items: center !important;
-  }
 
-  .slick-dots li.slick-active button:before {
-    opacity: 0.75;
-    color: #2072ac !important;
-  }
   /* artikel */
   .artikel h5 {
     font-size: 35px !important;
