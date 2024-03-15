@@ -10,12 +10,29 @@ h1 {
   font-size: 45px !important;
   letter-spacing: 1px;
 }
+table thead tr th {
+  border-style: none !important;
+}
+
+/* scrolling to top */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+}
 
 .text-justify {
   text-align: justify !important;
 }
-
-/* navbar style */
 
 .navbar ul li a {
   font-size: var(--text-p) !important;
@@ -38,258 +55,505 @@ h1 {
 }
 
 .text-login {
-  font-size: var(--text-h3);
+  font-size: var(--text-p);
   color: var(--text-blue) !important;
 }
 
-.px-25 {
-  padding: 0 125px !important;
-}
-
-/* hero */
-.hero {
-  background-image: url("/assets/hero.png") !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 99vw !important;
-  height: 768px !important;
-  margin-top: 24px !important;
-}
-
-.hero span {
-  color: var(--footer);
-}
-.hero div {
-  margin-left: 125px !important;
-  padding-top: 170px !important;
-}
-
-.btn-darkblue {
-  background-color: var(--btn-primary) !important;
-  color: #fff !important;
-}
-
-.btn-green {
-  background-color: var(--bg-table) !important;
-  color: #121212 !important;
-  font-weight: bold !important;
-}
-
-/* komoditas */
-.komoditas h5 {
-  font-size: 35px !important;
-  font-weight: bold !important;
-}
-
-.komoditas img {
-  width: 90% !important;
-}
-
-.komoditas .komoditasTitle .komoditasTranslate {
-  transform: translateY(100%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.komoditasTranslate {
-  width: 85% !important;
-  height: 50% !important;
-  padding: 0 24px !important;
-}
-
-.komoditas .komoditasTitle:hover .komoditasTranslate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.komoditas .komoditasTitle h5 {
-  font-size: var(--text-h2) !important;
-  color: #fff !important;
-}
-
-.komoditas .komoditasTitle a {
-  margin-top: 36px !important;
-  background-color: #288ed7 !important;
-  padding: 10px 20px !important;
-}
-
-.komoditas .komoditasTitle p {
+.navbar-text.text-login {
   font-size: var(--text-h3) !important;
-  color: #fff;
-}
-/* slick style */
-button.slick-arrow {
-  background-color: blue !important;
-  color: blue !important;
-  border-radius: 500px !important;
-  padding: 1px 1px 1px 0px;
-  align-self: center !important;
-  text-align: center !important;
-  align-items: center !important;
 }
 
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: #2072ac !important;
-}
-/* artikel */
-.artikel h5 {
-  font-size: 35px !important;
-  font-weight: bold !important;
+/* mobile version */
+@media only screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .px-25 {
+    padding: 0 12px !important;
+  }
+
+  /* navbar */
+  .navbar-text.text-login {
+    text-align: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    font-size: var(--text-h2) !important;
+  }
+
+  /* hero */
+  .hero {
+    background-image: url("/assets/heroMobile.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw !important;
+    height: 768px !important;
+    margin-top: 24px !important;
+  }
+
+  .hero span {
+    color: var(--footer);
+  }
+  .hero div {
+    padding-top: 170px !important;
+  }
+
+  .btn-darkblue {
+    background-color: var(--btn-primary) !important;
+    color: #fff !important;
+  }
+
+  .btn-green {
+    background-color: var(--bg-table) !important;
+    color: #121212 !important;
+    font-weight: bold !important;
+  }
+
+  /* komoditas */
+
+  .komoditas h5 {
+    font-size: var(--text-h1);
+    font-weight: bold;
+  }
+
+  .komoditas .komoditasTitle .komoditasTranslate {
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .komoditasTranslate {
+    width: 80% !important;
+    height: 20% !important;
+    padding: 0 24px !important;
+  }
+
+  .komoditas .komoditasTitle:hover .komoditasTranslate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .komoditas .komoditasTitle h5 {
+    font-size: var(--text-h3) !important;
+    color: #fff !important;
+  }
+
+  .komoditas .komoditasTitle a {
+    margin-top: 36px !important;
+    background-color: #288ed7 !important;
+    padding: 10px 20px !important;
+  }
+
+  .komoditas .komoditasTitle p {
+    font-size: var(--text-p) !important;
+    color: #fff;
+  }
+
+  /* artikel */
+
+  .artikel .card a {
+    color: #111 !important;
+  }
+
+  .card-body p {
+    font-size: 15px !important;
+    color: #6c757d !important;
+  }
+
+  .linkHover {
+    visibility: hidden;
+  }
+
+  .artikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
+
+  .heroArtikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
+
+  .card:hover .linkHover {
+    visibility: visible;
+  }
+
+  /* data */
+
+  .data {
+    margin: 44px 0 !important;
+  }
+
+  .data h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
+
+  .data p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+    margin-bottom: 32px !important;
+  }
+
+  table thead.bg-green {
+    background-color: #e7f4a4 !important;
+  }
+
+  table {
+    width: 768px !important;
+  }
+  .card-data {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    padding: 24px !important;
+  }
+
+  /* ebook */
+  .ebook .bg-ebook {
+    background-image: url("/assets/ebook.png");
+    margin-top: 12px !important;
+    /* height: 500px !important; */
+    background-size: 90% 100% !important;
+    background-repeat: no-repeat;
+    height: 344px !important;
+    border-radius: 16px !important;
+  }
+
+  .ebook h5 {
+    font-size: var(--text-h1);
+    font-weight: bold;
+  }
+
+  .ebook p {
+    font-size: var(--text-p);
+    color: #2072ac;
+  }
+
+  .ebook span {
+    font-size: 12px !important;
+  }
+
+  .ebook .ebookTranslate {
+    visibility: hidden;
+  }
+
+  .ebookContent:hover .ebookTranslate {
+    visibility: visible;
+
+    cursor: pointer;
+  }
+
+  .ebook a img {
+    margin-right: 12px !important;
+  }
+
+  /* footer */
+  footer {
+    background-color: var(--footer);
+    color: #fff !important;
+  }
+
+  footer p {
+    font-size: 15px !important;
+  }
+
+  .heroArtikel {
+    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .heroArtikel h1 {
+    font-size: var(--text-h1) !important;
+  }
+
+  .heroArtikel p {
+    font-size: var(--text-p) !important;
+    line-height: 30px !important;
+    margin-top: 24px !important;
+  }
+
+  .artikelArtikel h3 {
+    font-size: var(--text-h1) !important;
+    line-height: 30px !important;
+    font-weight: bold !important;
+  }
+
+  /* ! artikel page*/
+  .artikelCardText h5 {
+    margin-top: 12px !important;
+  }
+
+  /* ! artikelPage */
+  .cardArtikel div img {
+    width: 100% !important;
+  }
 }
 
-.artikel p {
-  font-size: 15px !important;
-  color: #2072ac !important;
-}
+/* dekstop */
+@media only screen and (min-width: 769px) {
+  /* navbar style */
 
-.artikel .card {
-  height: 100% !important;
-}
+  .navbar ul li {
+    padding: 0 24px !important;
+  }
+  .px-25 {
+    padding: 0 125px !important;
+  }
 
-h5.card-title {
-  font-size: 20px !important;
-}
+  /* hero */
+  .hero {
+    background-image: url("/assets/hero.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 99vw !important;
+    height: 768px !important;
+    margin-top: 24px !important;
+  }
 
-.card-body p {
-  font-size: 15px !important;
-  color: #6c757d !important;
-}
+  .hero span {
+    color: var(--footer);
+  }
+  .hero div {
+    margin-left: 125px !important;
+    padding-top: 170px !important;
+  }
 
-.linkHover {
-  visibility: hidden;
-}
+  .btn-darkblue {
+    background-color: var(--btn-primary) !important;
+    color: #fff !important;
+  }
 
-.artikel .card:hover {
-  border-radius: 16px;
-  outline: 3px solid #288ed7;
-  background: #fff;
-  box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
-  transition: 2ms ease;
-}
+  .btn-green {
+    background-color: var(--bg-table) !important;
+    color: #121212 !important;
+    font-weight: bold !important;
+  }
 
-.heroArtikel .card:hover {
-  border-radius: 16px;
-  outline: 3px solid #288ed7;
-  background: #fff;
-  box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
-  transition: 2ms ease;
-}
+  /* komoditas */
+  .komoditas h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
 
-.card:hover .linkHover {
-  visibility: visible;
-}
+  .komoditas img {
+    width: 80% !important;
+  }
 
-/* data n informasi */
-.data h5 {
-  font-size: 35px !important;
-  font-weight: bold !important;
-}
+  .komoditas .komoditasTitle .komoditasTranslate {
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
 
-.data p {
-  font-size: 15px !important;
-  color: #2072ac !important;
-}
+  .komoditasTranslate {
+    width: 80% !important;
+    padding: 0 8px !important;
+  }
 
-table thead.bg-green {
-  background-color: #e7f4a4 !important;
-}
+  .komoditas .komoditasTitle:hover .komoditasTranslate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-.card-data {
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
-  padding: 24px !important;
-}
-/* ebook */
-.ebook .bg-ebook {
-  background-image: url("/assets/ebook.png");
-  width: 23%;
-  /* height: 500px !important; */
-  background-size: 100% 100% !important;
-  background-repeat: no-repeat;
-  height: 344px !important;
-  border-radius: 16px !important;
-}
+  .komoditas .komoditasTitle h5 {
+    font-size: var(--text-h2) !important;
+    color: #fff !important;
+  }
 
-.ebook h5 {
-  font-size: var(--text-h1);
-  font-weight: bold;
-}
+  .komoditas .komoditasTitle a {
+    margin-top: 36px !important;
+    background-color: #288ed7 !important;
+    padding: 10px 20px !important;
+  }
 
-.ebook p {
-  font-size: var(--text-p);
-  color: #2072ac;
-}
+  .komoditas .komoditasTitle p {
+    font-size: var(--text-h3) !important;
+    color: #fff;
+  }
+  /* slick style */
+  button.slick-arrow {
+    background-color: blue !important;
+    color: blue !important;
+    border-radius: 500px !important;
+    padding: 1px 1px 1px 0px;
+    align-self: center !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
 
-.ebook .ebookTranslate {
-  visibility: hidden;
-}
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: #2072ac !important;
+  }
+  /* artikel */
+  .artikel h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
 
-.ebook .ebookContent:hover {
-  border-radius: 20px !important;
-  transition: 5ms ease-in-out;
-  box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+  .artikel p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+  }
 
-  background-color: #111;
-  opacity: 1;
-}
+  .artikel .card {
+    height: 100% !important;
+  }
 
-.ebookContent:hover .ebookTranslate {
-  visibility: visible;
+  h5.card-title {
+    font-size: 20px !important;
+  }
 
-  cursor: pointer;
-}
+  .card-body p {
+    font-size: 15px !important;
+    color: #6c757d !important;
+  }
 
-/* footer */
-footer {
-  background-color: var(--footer);
-  color: #fff !important;
-}
+  .linkHover {
+    visibility: hidden;
+  }
 
-footer p {
-  font-size: 15px !important;
-}
+  .artikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
 
-/* ! Artikel css */
-/* hero css */
-.heroArtikel {
-  background-image: url("/assets/backgroundArtikel.png") !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 99vw !important;
-  height: 100% !important;
-  margin-top: 24px !important;
-  margin-bottom: 100px !important ;
-}
+  .heroArtikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
 
-.heroArtikel h1 {
-  font-size: var(--text-heading) !important;
-}
+  .card:hover .linkHover {
+    visibility: visible;
+  }
 
-.heroArtikel p {
-  font-size: var(--text-h3) !important;
-  line-height: 30px !important;
-}
+  /* data n informasi */
+  .data h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
 
-.artikelArtikel h3 {
-  font-size: var(--text-h1) !important;
-  line-height: 30px !important;
-  font-weight: bold !important;
-}
+  .data p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+  }
 
-/* ! artikel */
-.card {
-  border-radius: 10px;
-  border: 1px solid #c8ccd0;
-  background: #fff;
-}
-.artikelCardText h5 {
-  font-size: var(--text-h1);
-}
+  table thead.bg-green {
+    background-color: #e7f4a4 !important;
+  }
 
-.artikelCardText p {
-  font-size: var(--text-h3) !important;
-  color: #103956;
+  .card-data {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    padding: 24px !important;
+  }
+  /* ebook */
+  .ebook .bg-ebook {
+    background-image: url("/assets/ebook.png");
+    width: 23%;
+    /* height: 500px !important; */
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+    height: 344px !important;
+    border-radius: 16px !important;
+  }
+
+  .ebook h5 {
+    font-size: var(--text-h1);
+    font-weight: bold;
+  }
+
+  .ebook p {
+    font-size: var(--text-p);
+    color: #2072ac;
+  }
+
+  .ebook .ebookTranslate {
+    visibility: hidden;
+  }
+
+  .ebook .ebookContent:hover {
+    border-radius: 20px !important;
+    transition: 5ms ease-in-out;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+
+    background-color: #111;
+    opacity: 1;
+  }
+
+  .ebookContent:hover .ebookTranslate {
+    visibility: visible;
+
+    cursor: pointer;
+  }
+
+  /* footer */
+  footer {
+    background-color: var(--footer);
+    color: #fff !important;
+  }
+
+  footer p {
+    font-size: 15px !important;
+  }
+
+  /* ! Artikel css */
+  /* hero css */
+  .heroArtikel {
+    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 99vw !important;
+    height: 100% !important;
+    margin-top: 24px !important;
+    margin-bottom: 100px !important ;
+  }
+
+  .heroArtikel h1 {
+    font-size: var(--text-heading) !important;
+  }
+
+  .heroArtikel p {
+    font-size: var(--text-h3) !important;
+    line-height: 30px !important;
+  }
+
+  .artikelArtikel h3 {
+    font-size: var(--text-h1) !important;
+    line-height: 30px !important;
+    font-weight: bold !important;
+  }
+
+  /* ! artikel */
+  .card {
+    border-radius: 10px;
+    border: 1px solid #c8ccd0;
+    background: #fff;
+  }
+  .artikelCardText h5 {
+    font-size: var(--text-h1);
+  }
+
+  .artikelCardText p {
+    font-size: var(--text-h3) !important;
+    color: #103956;
+  }
 }

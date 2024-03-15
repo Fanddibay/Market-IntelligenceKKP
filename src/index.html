@@ -6,9 +6,9 @@
     <title>Home</title>
   </head>
   <body>
-    <link rel="stylesheet" href="style/style.css" />
     <!-- link bootstrap css -->
     <link rel="stylesheet" href="vendors/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
 
     <!-- slick css -->
     <link
@@ -24,7 +24,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg shadow-sm">
       <div class="container-fluid px-25">
-        <a class="navbar-brand me-5" href="#">
+        <a class="navbar-brand" href="#">
           <img src="assets/logo.png" alt="" />
         </a>
         <button
@@ -38,49 +38,32 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarText"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0 text-center me-5">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDarkDropdown"
-                aria-controls="navbarNavDarkDropdown"
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
                 aria-expanded="false"
-                aria-label="Toggle navigation"
               >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle"
-                      href="#komoditas"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Komoditas
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Another action</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >Something else here</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+                Komoditas
+              </a>
+              <ul class="dropdown-menu text-center justify-content-center">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#artikel">Artikel</a>
@@ -92,12 +75,14 @@
               <a class="nav-link" href="#ebook">E-Book</a>
             </li>
           </ul>
-          <a
-            class="navbar-text text-login fs-4 fw-bold text-decoration-none"
-            href="#"
-          >
-            Login
-          </a>
+          <div class="text-center justify-content-center">
+            <a
+              class="navbar-text text-login ms-5 fw-bold text-decoration-none text-center"
+              href="#"
+            >
+              Login
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -105,7 +90,7 @@
 
     <!-- hero -->
     <section>
-      <div class="hero mb-5">
+      <div class="hero mb-5 px-25">
         <div class="container">
           <h1 class="fw-bold text-black mb-4 hero-text">
             Discover How We Can <br />
@@ -123,7 +108,7 @@
     <!-- end hero -->
 
     <!-- komoditas -->
-    <section class="komoditas container-fluid" - id="komoditas">
+    <section class="komoditas container-fluid" id="komoditas">
       <div class="px-25">
         <h5 class="mb-3 ms-2">Komoditas</h5>
         <div class="row">
@@ -224,7 +209,7 @@
           <p>Artikel Terkait Ekspor di Indonesia</p>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="artikelDetail.html" class="text-decoration-none">
               <div class="card py-1">
                 <img
@@ -248,7 +233,7 @@
               </div>
             </a>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="#" class="text-decoration-none">
               <div class="card py-1">
                 <img
@@ -272,7 +257,7 @@
               </div>
             </a>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="#" class="text-decoration-none">
               <div class="card py-1">
                 <img
@@ -297,8 +282,8 @@
             </a>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-4">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="#" class="text-decoration-none">
               <div class="card py-1 text-black">
                 <img
@@ -322,7 +307,7 @@
               </div>
             </a>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="#" class="text-decoration-none">
               <div class="card py-1 text-black">
                 <img
@@ -346,7 +331,7 @@
               </div>
             </a>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-6 col-auto mt-3">
             <a href="#" class="text-decoration-none">
               <div class="card py-1 text-black">
                 <img
@@ -410,19 +395,18 @@
             </div>
           </div>
         </div>
-        <div class="card-data">
+        <div class="card-data overflow-auto">
           <!-- table -->
           <table class="table mt-4">
-            <thead class="bg-green table-striped">
+            <thead class="bg-green table-striped border-op">
               <tr>
-                <th></th>
+                <th scope="col" rowspan="2" class="pb-4">Uraian</th>
                 <th></th>
                 <th>Januari 2024 (*)</th>
                 <th class="text-end">Januari - Februari 2024 (*)</th>
                 <th></th>
               </tr>
               <tr class="border-3 border-bottom border-dark">
-                <th scope="col">Uraian</th>
                 <th scope="col">Milyar (US$)</th>
                 <th scope="col">MoM (%)</th>
                 <th scope="col">Milyar (US$)</th>
@@ -430,60 +414,94 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="fw-bold">
                 <th scope="row">EKSPOR</th>
-                <td>
-                  20.53 <span><img src="assets/IconUp.png" alt="" /></span>
+                <td>5.63</td>
+                <td class="gap-3 align-items-center d-flex">
+                  9.79 <span><img src="assets/IconDown.png" alt="" /></span>
                 </td>
-                <td>
-                  -8.34 <span><img src="assets/IconUp.png" alt="" /></span>
-                </td>
-                <td>
-                  @20.53
-                  <span><img src="assets/IconDown.png" alt="" /></span>
-                </td>
-                <td>
-                  -8.34
-                  <span><img src="assets/IconDown.png" alt="" /></span>
+                <td>0.528</td>
+                <td class="gap-3 align-items-center d-flex">
+                  19.20"
+                  <span><img src="assets/IconUp.png" alt="" /></span>
                 </td>
               </tr>
               <tr>
                 <th scope="row" class="ps-4">Udang</th>
-                <td>20.53</td>
-                <td>
-                  -8.34 <span><img src="assets/IconUp.png" alt="" /></span>
+                <td>1.73</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -19.82 <span><img src="assets/IconDown.png" alt="" /></span>
                 </td>
-                <td>@20.53</td>
-                <td>-8.34</td>
+                <td>0.131</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -7.96 <span><img src="assets/IconDown.png" alt="" /></span>
+                </td>
               </tr>
               <tr>
                 <th scope="row" class="ps-4">Tuna</th>
-                <td>
-                  20.53 <span><img src="assets/IconUp.png" alt="" /></span>
+                <td>0.93</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -3.45<span><img src="assets/IconDown.png" alt="" /></span>
                 </td>
-                <td>-8.34</td>
-                <td>
-                  @20.53
-                  <span><img src="assets/IconDown.png" alt="" /></span>
-                </td>
-                <td>
-                  -8.34 <span><img src="assets/IconUp.png" alt="" /></span>
+                <td>0.081</td>
+                <td class="gap-3 align-items-center d-flex">
+                  10.31 <span><img src="assets/IconUp.png" alt="" /></span>
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="ps-4">Nila</th>
-                <td>
-                  20.53
-                  <span><img src="assets/IconDown.png" alt="" /></span>
+                <th scope="row" class="ps-4">Cumi</th>
+                <td>0.76</td>
+                <td class="gap-3 align-items-center d-flex">
+                  3.45<span><img src="assets/IconUp.png" alt="" /></span>
                 </td>
-                <td>
-                  -8.34 <span><img src="assets/IconUp.png" alt="" /></span>
+                <td>0.027</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -41.62 <span><img src="assets/IconDown.png" alt="" /></span>
                 </td>
-                <td>
-                  @20.53
-                  <span><img src="assets/IconDown.png" alt="" /></span>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Rajungan</th>
+                <td>0.45</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -7.55<span><img src="assets/IconDown.png" alt="" /></span>
                 </td>
-                <td>-8.34</td>
+                <td>0.107</td>
+                <td class="gap-3 align-items-center d-flex">
+                  142.63 <span><img src="assets/IconUp.png" alt="" /></span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Rumput Laut</th>
+                <td>0.43</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -27.76<span><img src="assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>0.049</td>
+                <td class="gap-3 align-items-center d-flex">
+                  35.57 <span><img src="assets/IconUp.png" alt="" /></span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Tilapia</th>
+                <td>0.08</td>
+                <td class="gap-3 align-items-center d-flex">
+                  4.13<span><img src="assets/IconUp.png" alt="" /></span>
+                </td>
+                <td>0.007</td>
+                <td class="gap-3 align-items-center d-flex">
+                  32.06 <span><img src="assets/IconUp.png" alt="" /></span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-4">Lobster</th>
+                <td>0.02</td>
+                <td class="gap-3 align-items-center d-flex">
+                  -6.89<span><img src="assets/IconDown.png" alt="" /></span>
+                </td>
+                <td>0.005</td>
+                <td class="gap-3 align-items-center d-flex">
+                  148.37 <span><img src="assets/IconUp.png" alt="" /></span>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -508,12 +526,14 @@
         <h5>E-BOOK</h5>
         <p>E-Book Data Ekspor Terbaru</p>
         <div class="row mt-4 justify-content-between">
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Januari 2024</p>
@@ -521,12 +541,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Febuari 2024</p>
@@ -534,12 +556,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Maret 2024</p>
@@ -547,12 +571,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">April 2024</p>
@@ -562,12 +588,14 @@
           </div>
         </div>
         <div class="row mt-4 justify-content-between">
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Mei 2024</p>
@@ -575,12 +603,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Juni 2024</p>
@@ -588,12 +618,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Juli 2024</p>
@@ -601,12 +633,14 @@
               </div>
             </div>
           </div>
-          <div class="col-auto bg-ebook position-relative ebookContent">
+          <div class="col-6 col-md-3 bg-ebook position-relative ebookContent">
             <div class="text-white mb-4">
               <div
                 class="position-absolute end-0 top-0 mt-3 me-3 ebookTranslate"
               >
-                <img src="assets/read.png" alt="" />
+                <a href="#">
+                  <img src="assets/read.png" alt="" />
+                </a>
               </div>
               <div class="position-absolute bottom-0 pb-3">
                 <p class="fw-bold">Agustus 2024</p>
@@ -632,8 +666,10 @@
           <img src="assets/logoKemendagri.png" class="img-fluid" alt="" />
           <img src="assets/logoSimple.png" alt="" class="mb-2" />
         </div>
-        <div class="justify-content-between d-flex mt-4">
-          <div>
+        <div
+          class="justify-content-between align-items-center d-md-flex d-block mt-4"
+        >
+          <div class="mt-md-0 mt-1">
             <p>
               Lorem ipsum dolor sit amet consectetur. Et lorem aliquam urna
               faucibus <br />
@@ -644,15 +680,17 @@
             </p>
           </div>
 
-          <div class="d-flex gap-4">
-            <img src="assets/facebook.svg" alt="" />
-            <img src="assets/twitter.svg" alt="" />
-            <img src="assets/Instagram.svg" alt="" />
+          <div class="d-flex gap-4 mt-md-0 mt-5">
+            <a href="#"> <img src="assets/facebook.svg" alt="" /></a>
+            <a href="#"> <img src="assets/twitter.svg" alt="" /></a>
+            <a href="#"> <img src="assets/Instagram.svg" alt="" /></a>
           </div>
         </div>
       </div>
-      <div class="justify-content-between d-flex mt-5">
-        <div class="d-flex gap-4">
+      <div
+        class="justify-content-end d-md-flex d-block justify-content-md-between d-block mt-5"
+      >
+        <div class="d-flex gap-3 gap-md-4">
           <div class="d-flex gap-2">
             <img src="assets/phone.svg" alt="" />
             <p>Telepon: (021)</p>
@@ -667,13 +705,13 @@
             <img src="assets/database.svg" alt="" />
             <p>Data & Informasi</p>
           </div>
-          <div class="d-flex gap-2">
+          <div class="d-flex gap-2 align-items-center">
             <img src="assets/faq.svg" alt="" />
             <p>FAQ</p>
           </div>
           <div class="d-flex gap-2">
             <img src="assets/callcenter.svg" alt="" />
-            <p>Help Center (HERO)</p>
+            <p>Help Center</p>
           </div>
         </div>
       </div>
@@ -682,24 +720,22 @@
       </div>
     </footer>
     <!-- end footer -->
+    <!-- scrolling -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- slick js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- link bootstrap js -->
 
+    <script src="vendors/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
     <!-- fontawesome js -->
 
     <script
       src="https://kit.fontawesome.com/9abdef5e4d.js"
       crossorigin="anonymous"
     ></script>
-    <!-- slick js -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
-    <!-- link bootstrap js -->
-    <script src="vendors/js/bootstrap.min.js"></script>
-    <script src="vendors/js/bootstrap.bundle.js"></script>
-    <script src="index.js"></script>
   </body>
 </html>
