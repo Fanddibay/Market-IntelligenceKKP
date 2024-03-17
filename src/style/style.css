@@ -170,6 +170,29 @@ button.slick-arrow {
 
   /* artikel */
 
+  .artikel h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
+
+  .artikel p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+  }
+
+  .artikel .card {
+    height: 100% !important;
+  }
+
+  h5.card-title {
+    font-size: 20px !important;
+  }
+
+  .card-body p {
+    font-size: 15px !important;
+    color: #6c757d !important;
+  }
+
   .artikel .card a {
     color: #111 !important;
   }
