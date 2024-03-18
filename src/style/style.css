@@ -104,7 +104,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/src/assets/hero.png") !important;
+    background-image: url("/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -316,8 +316,16 @@ button.slick-arrow {
   .ebook {
     margin: 0 auto !important;
   }
+
+  .ebook .row {
+    margin-top: 1px !important;
+  }
+
+  .ebook .row .col-6 {
+    margin-top: 4px !important;
+  }
   .ebook .bg-ebook {
-    background-image: url("/src/assets/ebook.png");
+    background-image: url("/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
     background-size: 98.5% 100% !important;
