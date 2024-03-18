@@ -328,10 +328,13 @@ button.slick-arrow {
     background-image: url("/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
-    background-size: 98.5% 100% !important;
+    background-size: 99% 100% !important;
     background-repeat: no-repeat;
     height: 344px !important;
     border-radius: 16px !important;
+    width: 50%;
+
+    position: relative !important;
   }
 
   .ebook h5 {
@@ -346,6 +349,14 @@ button.slick-arrow {
 
   .ebook span {
     font-size: 12px !important;
+  }
+
+  .ebook .ebookContent:hover {
+    border-radius: 16px !important;
+    transition: 5ms ease-in-out;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    background-color: #111;
+    opacity: 1;
   }
 
   .ebook .ebookTranslate {
@@ -627,14 +638,12 @@ button.slick-arrow {
     border-radius: 20px !important;
     transition: 5ms ease-in-out;
     box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
-
     background-color: #111;
     opacity: 1;
   }
 
   .ebookContent:hover .ebookTranslate {
     visibility: visible;
-
     cursor: pointer;
   }
 
