@@ -1,14 +1,14 @@
 /* add main color here to easy change all color */
 
 :root {
-  --heading-1: #103956;
-  --heading-2: #103956;
+  --btn-primary: #2c338d;
+  --btn-secondary: #103956;
   --text-blue: #2c338d;
   --text-grey: #6c757d;
   --text-black: #081c2b;
-  --btn-primary: #2c338d;
   --bg-table: #e7f4a4;
   --footer: #2c338d;
+  --white: #fff;
 
   /* font size */
   --text-heading: 45px;
