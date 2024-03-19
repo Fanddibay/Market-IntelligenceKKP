@@ -104,19 +104,19 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100vw !important;
-    height: 550px !important;
-    margin-top: 24px !important;
+    height: 670px !important;
+    margin-top: -124px !important;
   }
 
   .hero-text {
     font-size: var(--text-h1) !important;
     font-weight: bold !important;
-    margin-top: 32px !important;
+    margin-top: 144px !important;
   }
 
   .hero span {
