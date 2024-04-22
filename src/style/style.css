@@ -14,6 +14,12 @@ table thead tr th {
   border-style: none !important;
 }
 
+td div.tab-td {
+  width: 85px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
 /* scrolling to top */
 #scrollToTopBtn {
   display: none;
@@ -107,8 +113,9 @@ button.slick-arrow {
     background-image: url("/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    width: 100vw !important;
+    background-size: contain;
+    width: 105% !important;
+
     height: 670px !important;
     margin-top: -124px !important;
   }
@@ -304,6 +311,7 @@ button.slick-arrow {
   table {
     width: 768px !important;
   }
+
   .card-data {
     border-radius: 16px;
     background: #fff;
