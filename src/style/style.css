@@ -1,7 +1,7 @@
 @import "custom.css";
 
 * {
-  font-family: "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 0 !important;
   box-sizing: border-box !important;
 }
@@ -56,13 +56,14 @@ button.slick-arrow {
 }
 
 .navbar ul li a {
-  font-size: var(--text-p) !important;
+  font-size: 20px !important;
   font-weight: bold !important;
   color: #111 !important;
 }
 
 .nav-link {
   font-weight: 600 !important;
+  font-size: 20px !important;
 }
 
 .nav-link:hover {
@@ -122,8 +123,10 @@ button.slick-arrow {
 
   .hero-text {
     font-size: var(--text-h1) !important;
-    font-weight: bold !important;
+    font-weight: 800 !important;
     margin-top: 144px !important;
+    line-height: 44px !important;
+    margin-bottom: 28px !important;
   }
 
   .hero span {
@@ -443,8 +446,15 @@ button.slick-arrow {
     background-position: center;
     background-size: cover;
     width: 99vw !important;
-    height: 768px !important;
-    margin-top: 24px !important;
+    height: 100vh !important;
+    margin-top: -34px !important;
+  }
+
+  .hero-text {
+    line-height: 72px !important;
+    margin-bottom: 32px !important;
+    font-size: 54px !important;
+    letter-spacing: 1Spx !important;
   }
 
   .hero span {
@@ -452,7 +462,7 @@ button.slick-arrow {
   }
   .hero div {
     margin-left: 125px !important;
-    padding-top: 170px !important;
+    padding-top: 200px !important;
   }
 
   .btn-darkblue {
@@ -478,6 +488,9 @@ button.slick-arrow {
   }
 
   /* komoditas */
+  .komoditas {
+    margin-top: -504px !important;
+  }
   .komoditas h5 {
     font-size: 35px !important;
     font-weight: bold !important;
@@ -493,7 +506,7 @@ button.slick-arrow {
     top: 0;
     border-radius: 18px !important;
     left: 0;
-    width: 98%;
+    width: 88.5%;
     height: 100%;
     margin-left: 10px !important;
     background-color: rgba(
@@ -511,8 +524,8 @@ button.slick-arrow {
   }
 
   .komoditas img {
-    width: 100% !important;
-
+    width: 90% !important;
+    height: 300px !important;
     padding-left: 10px !important;
   }
 
@@ -524,7 +537,7 @@ button.slick-arrow {
 
   .komoditasTranslate {
     width: 100% !important;
-    padding: 0 28px !important;
+    padding: 0 32px !important;
   }
 
   .komoditas .komoditasTitle:hover .komoditasTranslate {
@@ -541,6 +554,7 @@ button.slick-arrow {
     margin-top: 36px !important;
     background-color: #288ed7 !important;
     padding: 10px 20px !important;
+    margin-right: 44px !important;
   }
 
   .komoditas .komoditasTitle p {
