@@ -111,7 +111,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroMobile.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -441,7 +441,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -460,8 +460,7 @@ button.slick-arrow {
   .hero span {
     color: var(--footer);
   }
-  .hero div {
-    margin-left: 125px !important;
+  .hero {
     padding-top: 200px !important;
   }
 
@@ -488,9 +487,7 @@ button.slick-arrow {
   }
 
   /* komoditas */
-  .komoditas {
-    margin-top: -504px !important;
-  }
+
   .komoditas h5 {
     font-size: 35px !important;
     font-weight: bold !important;
