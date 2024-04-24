@@ -537,12 +537,12 @@ button.slick-arrow {
 
   .komoditasTranslate {
     width: 100% !important;
-    padding: 0 32px !important;
+    padding: 0 44px !important;
   }
 
   .komoditas .komoditasTitle:hover .komoditasTranslate {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(20px);
   }
 
   .komoditas .komoditasTitle h5 {
