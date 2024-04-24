@@ -111,7 +111,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/src/assets/heroMobile.png") !important;
+    background-image: url("/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -444,7 +444,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/src/assets/hero.png") !important;
+    background-image: url("/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
