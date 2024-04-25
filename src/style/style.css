@@ -450,21 +450,21 @@ button.slick-arrow {
     background-size: cover;
     width: 99vw !important;
     height: 100vh !important;
-    margin-top: -54px !important;
+    margin-top: -24px !important;
   }
 
   .hero-text {
     line-height: 72px !important;
     margin-bottom: 32px !important;
     font-size: 54px !important;
-    letter-spacing: 1Spx !important;
+    letter-spacing: 1px !important;
   }
 
   .hero span {
     color: var(--footer);
   }
   .hero {
-    padding-top: 200px !important;
+    padding-top: 100px !important;
   }
 
   .btn-darkblue {
