@@ -449,8 +449,8 @@ button.slick-arrow {
     background-position: center;
     background-size: cover;
     width: 99vw !important;
-    height: 100vh !important;
-    margin-top: -24px !important;
+    height: 100% !important;
+    margin-top: 12px !important;
   }
 
   .hero-text {
@@ -464,7 +464,7 @@ button.slick-arrow {
     color: var(--footer);
   }
   .hero {
-    padding-top: 100px !important;
+    padding-top: 80px !important;
   }
 
   .btn-darkblue {
