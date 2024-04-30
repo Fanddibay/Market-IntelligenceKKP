@@ -67,12 +67,13 @@ button.slick-arrow {
 }
 
 .nav-link:hover {
-  font-weight: 800 !important;
+  font-weight: bold !important;
+
   color: var(--text-blue) !important;
 }
 
 .nav-link.active {
-  font-weight: 800 !important;
+  font-weight: bold !important;
   color: var(--text-blue) !important;
 }
 
