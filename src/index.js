@@ -54,3 +54,11 @@ $(document).ready(function () {
     return false;
   });
 });
+
+document.getElementById("importir").addEventListener("change", function () {
+  if (this.value === "global") {
+    window.location.href = "global.html";
+  } else if (this.value === "US") {
+    window.location.href = "market.html";
+  }
+});

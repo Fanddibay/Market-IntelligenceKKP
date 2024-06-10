@@ -20,6 +20,14 @@ td div.tab-td {
   justify-content: space-between !important;
 }
 
+.bg-blue {
+  background-color: var(--btn-primary);
+}
+
+.text-blue {
+  color: var(--btn-primary);
+}
+
 /* scrolling to top */
 #scrollToTopBtn {
   display: none;
@@ -112,7 +120,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroMobile.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -340,7 +348,7 @@ button.slick-arrow {
     margin-top: 4px !important;
   }
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
     background-size: 99% 100% !important;
@@ -398,7 +406,7 @@ button.slick-arrow {
   }
 
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% !important;
@@ -445,7 +453,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -634,7 +642,7 @@ button.slick-arrow {
   }
   /* ebook */
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     width: 23%;
     /* height: 500px !important; */
     background-size: 100% 100% !important;
@@ -683,7 +691,7 @@ button.slick-arrow {
   /* ! Artikel css */
   /* hero css */
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -722,4 +730,63 @@ button.slick-arrow {
     font-size: var(--text-h3) !important;
     color: #103956;
   }
+}
+
+.sidebar-dashboard {
+  min-width: 280px;
+  padding: 24px;
+  background-color: var(--btn-primary);
+  height: 100vh;
+}
+
+.sidebar-dashboard ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--text-h4);
+  padding: 10px;
+}
+
+.sidebar-dashboard ul li:hover a {
+  background-color: #5059c8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar-dashboard ul li.active-sidebar a {
+  background-color: #5059c8;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.statistikContent {
+  background-color: var(--btn-primary);
+  color: #fff;
+  border-radius: 8px !important;
+  border: 2px solid #b3b3b3;
+}
+
+.statistikContent p {
+  font-size: 24px;
+}
+
+.statistikContent span {
+  font-size: 18px;
+}
+
+.statistikContent hr {
+  width: 280px;
+  margin: 24px 0 !important;
+  border: 3px solid #b2d018 !important;
+  color: #b2d018 !important;
+}
+
+.prefensiGraph hr {
+  border: 4px solid #2c338d !important;
+  width: 250px;
+  margin: 24px 0 !important;
+}
+
+.vertikal-border {
+  border-left: 3px solid #b2d018;
+  margin: 0 12px 0 0 !important;
 }

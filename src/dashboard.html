@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- link bootstrap css -->
+    <link rel="stylesheet" href="vendors/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- slick css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg shadow-sm">
+      <div class="container-fluid px-25">
+        <a class="navbar-brand d-none d-md-block" href="index.html">
+          <img src="assets/logo.png" alt="" />
+        </a>
+        <a class="navbar-brand d-block d-md-none" href="index.html">
+          <img src="assets/logoMobile.png" alt="" />
+        </a>
+        <div class="ms-auto ms-md-0 d-block d-md-none me-2">
+          <a
+            class="text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-3"
+            href="#"
+          >
+            Login
+          </a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarText"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0 text-center mt-3 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Komoditas
+              </a>
+              <ul class="dropdown-menu text-start justify-content-center">
+                <li><a class="dropdown-item" href="#">Udang</a></li>
+                <li><a class="dropdown-item" href="#">Tuna</a></li>
+
+                <li>
+                  <a class="dropdown-item" href="#">Kepiting</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Rumput Laut</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Lobster</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Tilapia</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artikel">Artikel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#statistik">Data & Informasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ebook">E-Book</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-auto ms-md-0 d-none d-md-block">
+          <a
+            class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-4 w-100"
+            href="#"
+          >
+            Login
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- Statistik hero -->
+    <div class="d-flex">
+      <!-- left content -->
+      <div class="sidebar-dashboard sticky-top">
+        <ul class="text-white list-unstyled">
+          <li class="active-sidebar">
+            <a href="#" class="d-block mb-3 active">Dashboard</a>
+          </li>
+          <li>
+            <a href="proyeksi.html" class="d-block mb-3">Proyeksi</a>
+          </li>
+          <li>
+            <a href="prefensi.html" class="d-block mb-3">Preferensi</a>
+          </li>
+          <li>
+            <a href="market.html" class="d-block mb-3">Market Analysis</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- right content -->
+      <div class="flex-grow-1 px-5 py-3 mb-5">
+        <!-- input hero -->
+        <div class="d-flex align-items-end gap-4 justify-content-between">
+          <h3>
+            Komoditas <span class="text-warning">Udang</span> Tahun 2023 Pasar
+            US
+          </h3>
+          <div class="row w-50 align-items-center justify-content-between">
+            <div class="col-4">
+              <label for="importir">Importir</label>
+              <select
+                class="form-select"
+                id="importir"
+                aria-label="Default select example"
+              >
+                <option selected>US</option>
+                <option value="1">ID</option>
+                <option value="2">UK</option>
+                <option value="3">Global</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <label for="importir">Tahun</label>
+              <select
+                class="form-select"
+                id="tahun"
+                aria-label="Default select example"
+              >
+                <option selected>2024</option>
+                <option value="1">2022</option>
+                <option value="2">2023</option>
+                <option value="3">2024</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <label for="importir">Top</label>
+              <select
+                class="form-select"
+                id="top"
+                aria-label="Default select example"
+              >
+                <option selected>10</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">10</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- end input hero -->
+        <div class="row row-cols-3 justify-content-between mt-4 gy-4">
+          <div class="statistikContent p-3" style="width: 32.5%">
+            <div class="vertikal-border">
+              <div class="ps-2">
+                <div class="d-flex justify-content-between">
+                  <h5>Volume Pasar</h5>
+                  <img src="assets/Cube.png" alt="" />
+                </div>
+                <h3 class="fw-bold">864.302,86</h3>
+                <p class="fw-light fs-5">Ton</p>
+              </div>
+            </div>
+          </div>
+          <div class="statistikContent p-3" style="width: 32.5%">
+            <div class="vertikal-border">
+              <div class="ps-2">
+                <div class="d-flex justify-content-between">
+                  <h5>Volume Pasar</h5>
+                  <img src="assets/Dolar Koin.png" alt="" />
+                </div>
+                <h3 class="fw-bold">864.302,86</h3>
+                <p class="fw-light fs-5">Ton</p>
+              </div>
+            </div>
+          </div>
+          <div class="statistikContent p-3" style="width: 32.5%">
+            <div class="vertikal-border">
+              <div class="ps-2">
+                <div class="d-flex justify-content-between">
+                  <h5>Volume Pasar</h5>
+                  <img src="assets/Uptrend.png" alt="" />
+                </div>
+                <h3 class="fw-bold">864.302,86</h3>
+                <p class="fw-light fs-5">Ton</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="px-3 py-5 mt-3 statistikContent">
+          <h5 class="text-white fw-bold fs-1 mb-4">Statistik</h5>
+          <div class="row row-cols-3">
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+              <hr />
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+              <hr />
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+              <hr />
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+            </div>
+            <div class="col">
+              <div class="d-flex align-items-center gap-3">
+                <h5 class="fw-bold fs-1">$ 360.63</h5>
+                <p>Juta</p>
+              </div>
+              <span>Nilai</span>
+            </div>
+          </div>
+        </div> -->
+        <div class="mainContent container-fluid mt-5">
+          <div class="card p-3">
+            <h5
+              class="bg-blue text-white fs-3 p-3 text-center"
+              style="width: 160px"
+            >
+              Heatmap
+            </h5>
+            <img src="assets/heatmap.png" class="my-3 w-75 mx-auto" alt="" />
+            <div class="grid mt-5 mb-3 gy-3">
+              <p class="fs-4">
+                <span class="fw-bold text-blue">Sumber :</span> UN Comtrade
+              </p>
+              <p class="fs-4">
+                <span class="fw-bold text-blue">Keterangan :</span> Diameter
+                Bubble Mempresentasikan Total Nilai
+              </p>
+            </div>
+          </div>
+          <div class="row row-cols-2 mt-5">
+            <div class="col-12 col-md-6">
+              <div class="card p-3">
+                <img src="assets/grafik-udang.png" width="95%" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="card p-3">
+                <img src="assets/prefensi-udang.png" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+              <div class="card p-3">
+                <img src="assets/kebutuhan-udang.png" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+              <div class="card p-3">
+                <img src="assets/kebutuhan-bulanan-udang.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end right content -->
+    </div>
+    <!-- end Statistik hero -->
+
+    <!-- scrolling -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- slick js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- link bootstrap js -->
+
+    <script src="vendors/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+    <!-- fontawesome js -->
+
+    <script
+      src="https://kit.fontawesome.com/9abdef5e4d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
