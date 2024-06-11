@@ -55,38 +55,44 @@ $(document).ready(function () {
   });
 });
 
-function dashboardLogin() {
-  document.getElementById("importir").addEventListener("change", function () {
-    if (this.value === "global") {
-      window.location.href = "global.html";
-    } else if (this.value === "US") {
-      window.location.href = "market.html";
-    }
-  });
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const importirPage = document.getElementById("importir");
 
-document
-  .getElementById("togglePassword")
-  .addEventListener("click", function () {
-    const passwordInput = document.getElementById("exampleInputPassword1");
-    const type =
-      passwordInput.getAttribute("type") === "password" ? "text" : "password";
-    passwordInput.setAttribute("type", type);
-    this.classList.toggle("fa-eye-slash");
-  });
+  if (importirPage) {
+    importirPage.addEventListener("change", function () {
+      if (this.value === "global") {
+        window.location.href = "global.html";
+      } else if (this.value === "US") {
+        window.location.href = "market.html";
+      }
+    });
+  }
 
-// custom password
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-    const email = document.getElementById("exampleInputEmail1").value;
-    const password = document.getElementById("exampleInputPassword1").value;
-    const errorMessage = document.getElementById("errorMessage");
+  const togglePassword = document.getElementById("togglePassword");
+  const loginForm = document.getElementById("loginForm");
 
-    if (email === "test@kkp.com" && password === "test123") {
-      window.location.href = "dashboard.html";
-    } else {
-      errorMessage.textContent = "Email atau password anda salah!";
-    }
-  });
+  if (togglePassword) {
+    togglePassword.addEventListener("click", function () {
+      const passwordInput = document.getElementById("exampleInputPassword1");
+      const type =
+        passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+      this.classList.toggle("fa-eye-slash");
+    });
+  }
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const email = document.getElementById("exampleInputEmail1").value;
+      const password = document.getElementById("exampleInputPassword1").value;
+      const errorMessage = document.getElementById("errorMessage");
+
+      if (email === "kkp@mail.com" && password === "test123") {
+        window.location.href = "dashboard.html";
+      } else {
+        errorMessage.textContent = "Email atau password anda salah!";
+      }
+    });
+  }
+});
