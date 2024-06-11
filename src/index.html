@@ -31,12 +31,14 @@
           <img src="assets/logoMobile.png" alt="" />
         </a>
         <div class="ms-auto ms-md-0 d-block d-md-none me-2">
-          <a
+          <button
+            type="button"
             class="text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-3"
-            href="dashboard.html"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
             Login
-          </a>
+          </button>
         </div>
         <button
           class="navbar-toggler"
@@ -97,16 +99,93 @@
           </ul>
         </div>
         <div class="mx-auto ms-md-0 d-none d-md-block">
-          <a
+          <!-- Button trigger modal -->
+          <button
+            type="button"
             class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-4 w-100"
-            href="dashboard.html"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
           >
             Login
-          </a>
+          </button>
         </div>
       </div>
     </nav>
     <!-- end navbar -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">
+              Masuk
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Kkp@mail.com"
+                  required
+                  autocomplete="none"
+                />
+              </div>
+              <div class="form-group my-3 position-relative">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="******"
+                  required
+                  autocomplete="none"
+                />
+                <span
+                  id="togglePassword"
+                  class="fa fa-fw fa-eye field-icon position-absolute"
+                  style="
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                  "
+                ></span>
+              </div>
+              <div id="errorMessage" class="text-danger fw-light fs-6"></div>
+              <button
+                type="submit"
+                class="btn btn-darkblue text-white w-100 mt-3 py-2"
+              >
+                Sign in
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Protected by reCAPTCHA and subject to the Market Intelligence
+              <a href="#"> Privacy Policy</a> and
+              <a href="#">Terms of Service.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- hero -->
     <section>

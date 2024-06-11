@@ -120,7 +120,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroMobile.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -348,7 +348,7 @@ button.slick-arrow {
     margin-top: 4px !important;
   }
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
     background-size: 99% 100% !important;
@@ -406,7 +406,7 @@ button.slick-arrow {
   }
 
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% !important;
@@ -453,11 +453,11 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 99vw !important;
+    width: 98vw !important;
     height: 100% !important;
     margin-top: 12px !important;
   }
@@ -642,7 +642,7 @@ button.slick-arrow {
   }
   /* ebook */
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     width: 23%;
     /* height: 500px !important; */
     background-size: 100% 100% !important;
@@ -691,7 +691,7 @@ button.slick-arrow {
   /* ! Artikel css */
   /* hero css */
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -789,4 +789,15 @@ button.slick-arrow {
 .vertikal-border {
   border-left: 3px solid #b2d018;
   margin: 0 12px 0 0 !important;
+}
+
+.modal-footer p {
+  font-size: 12px;
+  font-weight: normal;
+  padding: 12px;
+}
+
+.modal-footer a {
+  color: var(--btn-primary);
+  text-decoration: none;
 }
