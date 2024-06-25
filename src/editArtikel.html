@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit - Artikel</title>
+  </head>
+  <body style="background-color: #f9f9f9">
+    <!-- link bootstrap css -->
+    <link rel="stylesheet" href="vendors/style/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- slick css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- data tables -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
+    />
+    <div class="">
+      <div class="d-flex">
+        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
+          <div class="position-fixed">
+            <div class="d-flex align-items-center pb-4">
+              <img src="assets/logo-sidebar.png" alt="" />
+            </div>
+            <ul class="list-unstyled text">
+              <li class="nav-link active">
+                <a href="artikelDashboard.html" class="d-block p-2">
+                  <i class="fa-solid fa-file-lines"></i> Artikel</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="ebook.html" class="d-block p-2"
+                  ><i class="fa-solid fa-book"></i> E-Book</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="uplod.html" class="d-block p-2"
+                  ><i class="fa-solid fa-upload"></i> Upload</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="admin.html" class="d-block p-2"
+                  ><i class="fa-solid fa-user-cog"></i> Admin</a
+                >
+              </li>
+            </ul>
+            <div class="logout-submenu">
+              <a href="index.html" class="d-block p-2"
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <!-- navbar -->
+          <div
+            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
+          >
+            <img src="assets/logo.png" alt="" />
+            <div class="d-flex align-items-center gap-4">
+              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
+              <img
+                src="https://via.placeholder.com/30"
+                alt="Avatar"
+                class="rounded-circle img-fluid"
+              />
+            </div>
+          </div>
+          <!-- content -->
+          <div class="px-5 mt-4">
+            <div class="container mt-5">
+              <h5 class="fw-bold mb-4 fs-4">Artikel</h5>
+              <div class="d-flex gap-4">
+                <div class="bg-white p-4 w-75">
+                  <h6 class="fw-bold mb-1 fs-5">Edit Artikel</h6>
+                  <p class="text-black-50 text-light">
+                    Please provide details of this product.
+                  </p>
+                  <div class="d-flex gap-4 my-4 justify-content-between">
+                    <div class="col-12 col-md-7">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Judul Artikel</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Ekspor Indonesia Terus Melanjutkan Kinerja Positif"
+                      />
+                    </div>
+                    <div class="col-12 col-md-4">
+                      <label for="dropdownTipe"> Tipe Arikel </label>
+                      <select
+                        class="form-select form-select-md"
+                        aria-label=".form-select-sm example"
+                        id="dropdownTipe"
+                      >
+                        <option selected>Artikel</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="card w-100">
+                    <div class="card-header">Deskripsi Artikel</div>
+                    <div class="card-body">
+                      <div class="mb-3 d-flex justify-content-start gap-2">
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('bold')"
+                        >
+                          <strong>B</strong>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('italic')"
+                        >
+                          <em>I</em>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('strike')"
+                        >
+                          <i class="fa-solid fa-strikethrough"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('underline')"
+                        >
+                          <i class="fa-solid fa-underline"></i>
+                        </button>
+
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-right"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-justify"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-list-check"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="addParagraphNumbers()"
+                        >
+                          <i class="fa-solid fa-list"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-list-check"></i>
+                        </button>
+                      </div>
+                      <div
+                        contenteditable="true"
+                        id="editor"
+                        class="border p-3"
+                        style="min-height: 200px"
+                      >
+                        Describe your product..
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <div class="mb-1">
+                      Upload Image <span class="text-danger">*</span>
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="dropZone"
+                        class="mb-3"
+                        ondragover="handleDragOver(event)"
+                        ondragleave="handleDragLeave(event)"
+                        ondrop="handleDrop(event)"
+                      >
+                        <p class="mb-0 mt-5">
+                          <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
+                          Drop here to attach or upload
+                        </p>
+                        <input
+                          type="file"
+                          id="fileInput"
+                          accept="image/*"
+                          style="display: none"
+                        />
+                      </div>
+                      <p class="text-muted mb-0">Max size: 10 MB</p>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <hr />
+                    <div class="justify-content-end mt-4 text-end">
+                      <a href="#" class="btn btn-primary">Update</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white p-3 w-25 h-25">
+                  <h5 class="fs-5 fw-bold mb-2">Creatae New Artikel</h5>
+                  <p class="fs-6 text-black-50">
+                    There are three different section on this page. Product
+                    details, Product variants and Product pack sizes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- scrolling -->
+    <button id="scrollToTopBtn" title="Go to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- slick js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- link bootstrap js -->
+
+    <script src="vendors/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+    <!-- fontawesome js -->
+
+    <script
+      src="https://kit.fontawesome.com/9abdef5e4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- script data tables -->
+
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+    <script>
+      function formatText(command) {
+        document.execCommand(command, false, null);
+      }
+
+      function addParagraphNumbers() {
+        const editor = document.getElementById("editor");
+        const paragraphs = editor.innerHTML.split(/<br\s*\/?>/);
+        let numberedParagraphs = "";
+
+        for (let i = 0; i < paragraphs.length; i++) {
+          numberedParagraphs += i + 1 + ". " + paragraphs[i] + "<br>";
+        }
+
+        editor.innerHTML = numberedParagraphs;
+      }
+    </script>
+  </body>
+</html>

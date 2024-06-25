@@ -120,7 +120,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroMobile.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -348,7 +348,7 @@ button.slick-arrow {
     margin-top: 4px !important;
   }
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
     background-size: 99% 100% !important;
@@ -406,7 +406,7 @@ button.slick-arrow {
   }
 
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% !important;
@@ -453,7 +453,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -642,7 +642,7 @@ button.slick-arrow {
   }
   /* ebook */
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     width: 23%;
     /* height: 500px !important; */
     background-size: 100% 100% !important;
@@ -691,7 +691,7 @@ button.slick-arrow {
   /* ! Artikel css */
   /* hero css */
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -737,6 +737,7 @@ button.slick-arrow {
   padding: 24px;
   background-color: var(--btn-primary);
   height: 100vh;
+  position: fixed !important;
 }
 
 .sidebar-dashboard ul li a {
@@ -773,17 +774,10 @@ button.slick-arrow {
   font-size: 18px;
 }
 
-.statistikContent hr {
-  width: 280px;
-  margin: 24px 0 !important;
-  border: 3px solid #b2d018 !important;
-  color: #b2d018 !important;
-}
-
-.prefensiGraph hr {
-  border: 4px solid #2c338d !important;
-  width: 250px;
-  margin: 24px 0 !important;
+.statistikContent .col-hr {
+  border-bottom: 4px solid #b2d018;
+  border-width: 4px;
+  margin: 12px 0 !important;
 }
 
 .vertikal-border {
@@ -800,4 +794,140 @@ button.slick-arrow {
 .modal-footer a {
   color: var(--btn-primary);
   text-decoration: none;
+}
+
+.sidebar-admin {
+  min-height: 100vh !important;
+}
+
+.sidebar-admin ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  gap: 12px;
+}
+
+.sidebar-admin ul li {
+  margin-top: 12px !important;
+  padding: 10px;
+}
+
+.sidebar-admin ul li:hover,
+.logout-submenu:hover {
+  background-color: #5059c8;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.sidebar-admin ul li.active {
+  background-color: #5059c8 !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  min-width: 240px !important;
+}
+
+.sidebar-admin .logout-submenu {
+  padding: 10px;
+  margin-top: 275px !important;
+  font-size: 16px;
+}
+.sidebar-admin .logout-submenu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.dt-length label {
+  margin-left: 12px !important;
+}
+
+button.dt-paging-button.current {
+  border-radius: 8px !important;
+  border: 1px solid #2c338d !important;
+  background: var(--Dark-6-White, #fff) !important;
+}
+
+#dropZone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  min-height: 200px;
+  border-radius: 6px;
+}
+
+table#example tr td {
+  padding: 24px 4px !important;
+  justify-content: center !important;
+  text-align: start !important;
+}
+
+table#example tr th {
+  padding: 24px 14px !important;
+  justify-content: center !important;
+  text-align: start !important;
+}
+
+table#example1 tr td {
+  padding: 24px 4px !important;
+  justify-content: center !important;
+  text-align: start !important;
+}
+
+table#example1 tr th {
+  padding: 24px 14px !important;
+  justify-content: center !important;
+  text-align: start !important;
+}
+
+.uplod table tr td,
+.uplod table tr th {
+  padding: 24px 14px !important;
+  justify-content: center !important;
+  text-align: start !important;
+}
+
+.btn-outline-primary {
+  color: #2c338d !important;
+  border: 1.4px solid #2c338d !important;
+  border-radius: 4px !important;
+}
+
+.btn-outline-primary:hover {
+  color: #fff !important;
+  border: 1.4px solid #fff !important;
+  border-radius: 4px !important;
+  background-color: #2c338d !important;
+}
+
+.btn-primary {
+  color: #fff !important;
+  border: 1.4px solid #2c338d !important;
+  border-radius: 4px !important;
+  background-color: #2c338d !important;
+}
+
+.btn-primary:hover {
+  color: #fff !important;
+  border: 1.4px solid #fff !important;
+  border-radius: 4px !important;
+  background-color: none !important;
+  background-color: #2933ca !important;
+}
+
+.uplodDataLink li a.active {
+  color: #202020;
+  border-bottom: 2px solid var(--text-blue);
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.uplodDataLink li a {
+  color: #898989;
+
+  text-decoration: none;
+}
+
+.dt-search {
+  display: none !important;
 }
