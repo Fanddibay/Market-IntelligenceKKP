@@ -58,7 +58,12 @@
               </li>
               <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Admin</a
+                  ><i class="fa-solid fa-user"></i> Admin</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="roleManagement.html" class="d-block p-2"
+                  ><i class="fa-solid fa-user-cog"></i> Management Role</a
                 >
               </li>
             </ul>
@@ -88,7 +93,11 @@
           <div class="px-5 mt-4">
             <h5 class="fw-bold fs-4">Artikel</h5>
             <div class="justify-content-end text-end">
-              <a href="#" class="rounded-1 px-4 btn btn-outline-primary">Add</a>
+              <a
+                href="addArtikel.html"
+                class="rounded-1 px-4 btn btn-outline-primary"
+                >Add</a
+              >
             </div>
             <table
               id="example"
@@ -101,6 +110,8 @@
                   <th>Judul Artikel</th>
                   <th>Tipe</th>
                   <th>Deskrpisi Komoditas</th>
+                  <th>Status</th>
+
                   <th>Actions</th>
                 </tr>
               </thead>
@@ -111,6 +122,8 @@
                   <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
                   <td>Artikel</td>
                   <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
+                  <td class="text-success fw-bold">Publish</td>
+
                   <td>
                     <!-- Example single danger button -->
                     <div class="btn-group">
@@ -126,6 +139,14 @@
                         <li>
                           <a
                             class="dropdown-item"
+                            href="artikelView.html"
+                            target="_blank"
+                            >View</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
                             href="#"
                             data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop"
@@ -135,6 +156,11 @@
                         <li>
                           <a class="dropdown-item" href="editArtikel.html"
                             >Edit</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="editArtikel.html"
+                            >Unpublish</a
                           >
                         </li>
                       </ul>
@@ -186,61 +212,11 @@
                 <tr>
                   <td>2</td>
                   <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
                   <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
                   <td>Artikel</td>
                   <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
+                  <td class="text-danger fw-bold">Unpublish</td>
+
                   <td>
                     <!-- Example single danger button -->
                     <div class="btn-group">
@@ -253,217 +229,32 @@
                         <i class="fas fa-ellipsis"></i>
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Edit</a>
+                          <a
+                            class="dropdown-item"
+                            href="artikelView.html"
+                            target="_blank"
+                            >View</a
+                          >
                         </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Edit</a>
+                          <a
+                            class="dropdown-item"
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop"
+                            >Delete</a
+                          >
                         </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="editArtikel.html"
+                            >Edit</a
+                          >
                         </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Infografis Market Review Untuk Komoditas Tuna</td>
-                  <td>Infografis</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Delete</a></li>
-                        <li>
-                          <a class="dropdown-item" href="#">Edit</a>
+                          <a class="dropdown-item" href="editArtikel.html"
+                            >Unpublish</a
+                          >
                         </li>
                       </ul>
                     </div>

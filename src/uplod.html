@@ -41,7 +41,7 @@
               <img src="assets/logo-sidebar.png" alt="" />
             </div>
             <ul class="list-unstyled text">
-              <li class="nav-link d-block">
+              <li class="nav-link">
                 <a href="artikelDashboard.html" class="d-block p-2">
                   <i class="fa-solid fa-file-lines"></i> Artikel</a
                 >
@@ -58,12 +58,17 @@
               </li>
               <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Admin</a
+                  ><i class="fa-solid fa-user"></i> Admin</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="roleManagement.html" class="d-block p-2"
+                  ><i class="fa-solid fa-user-cog"></i> Management Role</a
                 >
               </li>
             </ul>
             <div class="logout-submenu">
-              <a href="#" class="d-block p-2"
+              <a href="index.html" class="d-block p-2"
                 ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
               >
             </div>
@@ -186,16 +191,20 @@
                             action cannot be undone
                           </div>
                           <div class="modal-footer gap-3">
-                            <button
+                            <a
                               type="button"
                               class="btn btn-outline-primary"
                               data-bs-dismiss="modal"
                             >
                               Cancel
-                            </button>
-                            <button type="button" class="btn btn-primary">
+                            </a>
+                            <a
+                              class="btn btn-primary"
+                              data-bs-toggle="modal"
+                              data-bs-target="#viewSuccess"
+                            >
                               Upload
-                            </button>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -317,6 +326,38 @@
                     There are three different section on this page. Product
                     details, Product variants and Product pack sizes.
                   </p>
+                </div>
+              </div>
+            </div>
+            <!-- modal success uplod -->
+            <div
+              class="modal fade"
+              id="viewSuccess"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered mx-auto">
+                <div class="modal-content text-center">
+                  <div
+                    class="modal-header text-center flex justify-content-between"
+                  >
+                    <div></div>
+                    <div>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                  </div>
+                  <div class="modal-body text-center py-4">
+                    <img src="assets/sucess.png" class="mx-auto" alt="" />
+                    <h5 class="fw-bold fs-4">Uplod Sucess</h5>
+                  </div>
                 </div>
               </div>
             </div>

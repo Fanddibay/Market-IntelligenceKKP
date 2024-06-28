@@ -824,12 +824,12 @@ button.slick-arrow {
   background-color: #5059c8 !important;
   padding: 10px !important;
   border-radius: 10px !important;
-  min-width: 240px !important;
+  min-width: 200px !important;
 }
 
 .sidebar-admin .logout-submenu {
   padding: 10px;
-  margin-top: 275px !important;
+  margin-top: 210px !important;
   font-size: 16px;
 }
 .sidebar-admin .logout-submenu a {
@@ -930,4 +930,9 @@ table#example1 tr th {
 
 .dt-search {
   display: none !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-accent-bg: #ecedf9 !important;
+  color: var(--bs-table-striped-color);
 }

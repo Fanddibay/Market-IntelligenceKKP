@@ -41,12 +41,12 @@
               <img src="assets/logo-sidebar.png" alt="" />
             </div>
             <ul class="list-unstyled text">
-              <li class="nav-link">
+              <li class="nav-link active">
                 <a href="artikelDashboard.html" class="d-block p-2">
                   <i class="fa-solid fa-file-lines"></i> Artikel</a
                 >
               </li>
-              <li class="nav-link active">
+              <li class="nav-link">
                 <a href="ebook.html" class="d-block p-2"
                   ><i class="fa-solid fa-book"></i> E-Book</a
                 >
@@ -92,10 +92,10 @@
           <!-- content -->
           <div class="px-5 mt-4">
             <div class="container mt-5">
-              <h5 class="fw-bold mb-4 fs-4">E - Book</h5>
+              <h5 class="fw-bold mb-4 fs-4">Artikel dan Infografis</h5>
               <div class="d-flex gap-4">
                 <div class="bg-white p-4 w-75">
-                  <h6 class="fw-bold mb-1 fs-5">Edit E - Book</h6>
+                  <h6 class="fw-bold mb-1 fs-5">Artikel Baru</h6>
                   <p class="text-black-50 text-light">
                     Please provide details of this product.
                   </p>
@@ -125,7 +125,93 @@
                       </select>
                     </div>
                   </div>
+                  <div class="card w-100">
+                    <div class="card-header">Deskripsi Artikel</div>
+                    <div class="card-body">
+                      <div class="mb-3 d-flex justify-content-start gap-2">
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('bold')"
+                        >
+                          <strong>B</strong>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('italic')"
+                        >
+                          <em>I</em>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('strike')"
+                        >
+                          <i class="fa-solid fa-strikethrough"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="formatText('underline')"
+                        >
+                          <i class="fa-solid fa-underline"></i>
+                        </button>
 
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-left"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-right"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-align-justify"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-list-check"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                          onclick="addParagraphNumbers()"
+                        >
+                          <i class="fa-solid fa-list"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-list-check"></i>
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-link text-black-50 text-decoration-none"
+                        >
+                          <i class="fa-solid fa-image"></i>
+                        </button>
+                      </div>
+                      <div
+                        contenteditable="true"
+                        id="editor"
+                        class="border p-3"
+                        style="min-height: 200px"
+                      >
+                        Describe your product..
+                      </div>
+                    </div>
+                  </div>
                   <div class="mt-4">
                     <div class="mb-1">
                       Upload Image <span class="text-danger">*</span>
@@ -153,14 +239,40 @@
                     </div>
                   </div>
                   <div class="mt-4">
+                    <div class="mb-1">
+                      Upload Thumbnail <span class="text-danger">*</span>
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="dropZone"
+                        class="mb-3"
+                        ondragover="handleDragOver(event)"
+                        ondragleave="handleDragLeave(event)"
+                        ondrop="handleDrop(event)"
+                      >
+                        <p class="mb-0 mt-5">
+                          <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
+                          Drop here to attach or upload
+                        </p>
+                        <input
+                          type="file"
+                          id="fileInput"
+                          accept="image/*"
+                          style="display: none"
+                        />
+                      </div>
+                      <p class="text-muted mb-0">Max size: 10 MB</p>
+                    </div>
+                  </div>
+                  <div class="mt-4">
                     <hr />
                     <div class="justify-content-end mt-4 text-end">
-                      <a href="#" class="btn btn-primary">Update</a>
+                      <a href="#" class="btn btn-primary">Create Artikel</a>
                     </div>
                   </div>
                 </div>
                 <div class="bg-white p-3 w-25 h-25">
-                  <h5 class="fs-5 fw-bold mb-2">Creatae New Artikel</h5>
+                  <h5 class="fs-5 fw-bold mb-2">Create New Artikel</h5>
                   <p class="fs-6 text-black-50">
                     There are three different section on this page. Product
                     details, Product variants and Product pack sizes.
