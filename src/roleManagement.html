@@ -58,7 +58,7 @@
               </li>
               <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Admin</a
+                  ><i class="fa-solid fa-user"></i> User Management</a
                 >
               </li>
               <li class="nav-link active">
@@ -92,7 +92,22 @@
           <!-- content -->
           <div class="px-5 mt-4">
             <div class="container mt-5">
-              <h5 class="fw-bold mb-4 fs-4">Management Role</h5>
+              <div
+                class="d-flex justify-content-between align-items-center mb-5"
+              >
+                <div>
+                  <h5 class="fw-bold fs-4">Management Role</h5>
+                </div>
+                <div>
+                  <a
+                    href="addEbook.html"
+                    class="rounded-1 px-4 btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addRole"
+                    >Add</a
+                  >
+                </div>
+              </div>
               <div class="bg-white p-4 mt-4">
                 <div class="gap-4 my-4 justify-content-between">
                   <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
@@ -115,9 +130,6 @@
                         <option value="Admin-Data-Comtrade ">
                           Admin Data Comtrade
                         </option>
-                        <option value="New-Role" class="fw-bold">
-                          + Add New Role
-                        </option>
                       </select>
                     </div>
                   </div>
@@ -127,7 +139,7 @@
                         >Akses</label
                       >
                     </div>
-                    <div class="col-10">
+                    <div class="col-4">
                       <div class="row gy-5 row-cols-2">
                         <div class="d-flex align-items-center gap-2">
                           <input
@@ -208,15 +220,22 @@
 
                 <div class="mt-4">
                   <hr />
-                  <div class="justify-content-end mt-4 text-end d-flex gap-4">
+                  <div
+                    class="justify-content-between mt-4 text-end d-flex gap-4"
+                  >
                     <a
                       href="#"
-                      class="btn btn-outline-primary"
+                      class="btn btn-danger"
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"
-                      >Discard</a
+                      >Delete</a
                     >
-                    <a href="#" class="btn btn-primary" id="uplodBtn"
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      id="saveRole"
+                      data-bs-toggle="modal"
+                      data-bs-target="#saveBtn"
                       >Save Changes</a
                     >
                   </div>
@@ -232,10 +251,8 @@
                   >
                     <div class="modal-dialog modal-dialog-centered mx-auto">
                       <div class="modal-content text-center">
-                        <div class="modal-header te">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                            Are you sure?
-                          </h1>
+                        <div class="modal-header">
+                          <div></div>
                           <button
                             type="button"
                             class="btn-close"
@@ -244,19 +261,114 @@
                           ></button>
                         </div>
                         <div class="modal-body">
-                          Are you sure you want to upload this file? This action
-                          cannot be undone
+                          <h1
+                            class="modal-title fs-5 fw-bold mb-3"
+                            id="staticBackdropLabel"
+                          >
+                            Anda yakin ?
+                          </h1>
+                          Apa kamu yakin ingin menghapus role yang anda pilih
                         </div>
                         <div class="modal-footer gap-3">
                           <button
                             type="button"
-                            class="btn btn-outline-primary"
+                            class="btn btn-outline-danger w-25"
                             data-bs-dismiss="modal"
                           >
-                            Cancel
+                            Batal
                           </button>
-                          <button type="button" class="btn btn-primary">
-                            Upload
+                          <button type="button" class="btn btn-danger w-25">
+                            Hapus
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- modal add role -->
+                  <div
+                    class="modal fade"
+                    id="addRole"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content text-center">
+                        <div class="modal-header">
+                          <div></div>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="d-flex gap-4 align-items-center w-100">
+                            <h5 class="w-25">Nama Role</h5>
+                            <input type="text" class="w-75" />
+                          </div>
+                        </div>
+                        <div
+                          class="modal-footer d-flex text-center justify-content-end gap-4 me-1"
+                        >
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary w-25"
+                            data-bs-dismiss="modal"
+                          >
+                            Batal
+                          </button>
+                          <button type="button" class="btn btn-primary w-25">
+                            Simpan
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="saveBtn"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content text-center">
+                        <div class="modal-header">
+                          <div></div>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <h1
+                            class="modal-title fs-5 fw-bold mb-3"
+                            id="staticBackdropLabel"
+                          >
+                            Anda yakin ?
+                          </h1>
+                          Apa anda yakin ingin menyimpan akses yang sudah
+                          dipilih
+                        </div>
+                        <div class="modal-footer gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary w-25"
+                            data-bs-dismiss="modal"
+                          >
+                            Batal
+                          </button>
+                          <button type="button" class="btn btn-primary w-25">
+                            Hapus
                           </button>
                         </div>
                       </div>

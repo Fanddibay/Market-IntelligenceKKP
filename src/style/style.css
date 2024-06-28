@@ -453,7 +453,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -935,4 +935,9 @@ table#example1 tr th {
 .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: #ecedf9 !important;
   color: var(--bs-table-striped-color);
+}
+
+.modal-header,
+.modal-footer {
+  border: none !important;
 }
