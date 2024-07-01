@@ -54,23 +54,28 @@
               </li>
               <li class="nav-link">
                 <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Upload</a
+                  ><i class="fa-solid fa-upload"></i> Unggah</a
+                >
+              </li>
+              <li class="nav-link">
+                <a href="download.html" class="d-block p-2"
+                  ><i class="fa-solid fa-user"></i> Download</a
                 >
               </li>
               <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> User Management</a
+                  ><i class="fa-solid fa-user"></i> Menejemen User</a
                 >
               </li>
               <li class="nav-link">
                 <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Management Role</a
+                  ><i class="fa-solid fa-user-cog"></i> Peran</a
                 >
               </li>
             </ul>
             <div class="logout-submenu">
               <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
               >
             </div>
           </div>
@@ -175,10 +180,8 @@
                 >
                   <div class="modal-dialog modal-dialog-centered mx-auto">
                     <div class="modal-content text-center">
-                      <div class="modal-header te">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                          Are you sure?
-                        </h1>
+                      <div class="modal-header">
+                        <div></div>
                         <button
                           type="button"
                           class="btn-close"
@@ -186,14 +189,22 @@
                           aria-label="Close"
                         ></button>
                       </div>
-                      <div class="modal-body">
-                        Are you sure you want to delete this file? This action
-                        cannot be undone
+                      <div
+                        class="modal-body text-center justify-content-center mx-auto"
+                      >
+                        <h1
+                          class="modal-title fs-3 fw-bold"
+                          id="staticBackdropLabel"
+                        >
+                          Anda yakin?
+                        </h1>
+                        Apakah anda yakin untuk menghapus file ini? file ini
+                        belum diselesaikan
                       </div>
                       <div class="modal-footer gap-3">
                         <button
                           type="button"
-                          class="btn btn-outline-primary"
+                          class="btn btn-outline-danger"
                           data-bs-dismiss="modal"
                         >
                           Close

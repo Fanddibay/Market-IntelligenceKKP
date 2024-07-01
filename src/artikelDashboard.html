@@ -53,23 +53,29 @@
               </li>
               <li class="nav-link">
                 <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Upload</a
+                  ><i class="fa-solid fa-upload"></i> Unggah</a
                 >
               </li>
               <li class="nav-link">
+                <a href="download.html" class="d-block p-2"
+                  ><i class="fa-solid fa-user"></i> Download</a
+                >
+              </li>
+              
+              <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> User Management</a
+                  ><i class="fa-solid fa-user"></i> Menejemen User</a
                 >
               </li>
               <li class="nav-link">
                 <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Management Role</a
+                  ><i class="fa-solid fa-user-cog"></i> Peran</a
                 >
               </li>
             </ul>
             <div class="logout-submenu">
               <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
+                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
               >
             </div>
           </div>
@@ -90,7 +96,7 @@
             </div>
           </div>
           <!-- content -->
-          <div class="px-5 mt-4">
+          <div class="px-5 mt-4 container w-100">
             <h5 class="fw-bold fs-4">Artikel</h5>
             <div class="justify-content-end text-end">
               <a
@@ -99,169 +105,181 @@
                 >Add</a
               >
             </div>
-            <table
-              id="example"
-              class="table table-striped table-custom bg-white rounded-3"
-            >
-              <thead>
-                <tr class="text-secondary">
-                  <th>No</th>
-                  <th>Gambar</th>
-                  <th>Judul Artikel</th>
-                  <th>Tipe</th>
-                  <th>Deskrpisi Komoditas</th>
-                  <th>Status</th>
+            <div class="">
+              <table
+                id="example"
+                class="table table-striped table-custom bg-white rounded-3"
+              >
+                <thead>
+                  <tr class="text-secondary">
+                    <th>No</th>
+                    <th>Gambar</th>
+                    <th>Judul Artikel</th>
+                    <th>Tipe</th>
+                    <th>Deskrpisi Komoditas</th>
+                    <th>Status</th>
 
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><img src="assets/gambar-table1.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td class="text-success fw-bold">Publish</td>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><img src="assets/gambar-table1.png" alt="" /></td>
+                    <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
+                    <td>Artikel</td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur. Blandit nunc
+                    </td>
+                    <td class="text-success fw-bold">Publish</td>
 
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="artikelView.html"
-                            target="_blank"
-                            >View</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"
-                            >Delete</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editArtikel.html"
-                            >Edit</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editArtikel.html"
-                            >Unpublish</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <!-- Modal -->
-                <div
-                  class="modal fade"
-                  id="staticBackdrop"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabindex="-1"
-                  aria-labelledby="staticBackdropLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered mx-auto">
-                    <div class="modal-content text-center">
-                      <div class="modal-header te">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                          Are you sure?
-                        </h1>
-                        <button
+                    <td>
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <a
                           type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        Are you sure you want to delete this file? This action
-                        cannot be undone
-                      </div>
-                      <div class="modal-footer gap-3">
-                        <button
-                          type="button"
-                          class="btn btn-outline-primary"
-                          data-bs-dismiss="modal"
+                          class="text-secondary"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
                         >
-                          Close
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          Delete
-                        </button>
+                          <i class="fas fa-ellipsis"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="artikelView.html"
+                              target="_blank"
+                              >View</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editArtikel.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editArtikel.html"
+                              >Unpublish</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content text-center">
+                        <div class="modal-header">
+                          <div></div>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div
+                          class="modal-body text-center justify-content-center mx-auto"
+                        >
+                          <h1
+                            class="modal-title fs-3 fw-bold"
+                            id="staticBackdropLabel"
+                          >
+                            Anda yakin?
+                          </h1>
+                          Apakah anda yakin untuk menghapus file ini? file ini
+                          belum diselesaikan
+                        </div>
+                        <div class="modal-footer gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-outline-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-danger">
+                            Delete
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <tr>
-                  <td>2</td>
-                  <td><img src="assets/gambar-table2.png" alt="" /></td>
-                  <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
-                  <td>Artikel</td>
-                  <td>Lorem ipsum dolor sit amet consectetur. Blandit nunc</td>
-                  <td class="text-danger fw-bold">Unpublish</td>
+                  <tr>
+                    <td>2</td>
+                    <td><img src="assets/gambar-table2.png" alt="" /></td>
+                    <td>Ekspor Indonesia Terus Melanjutkan Kinerja Positif</td>
+                    <td>Artikel</td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur. Blandit nunc
+                    </td>
+                    <td class="text-danger fw-bold">Unpublish</td>
 
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="artikelView.html"
-                            target="_blank"
-                            >View</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            href="#"
-                            data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"
-                            >Delete</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editArtikel.html"
-                            >Edit</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editArtikel.html"
-                            >Unpublish</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                    <td>
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <a
+                          type="button"
+                          class="text-secondary"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="fas fa-ellipsis"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="artikelView.html"
+                              target="_blank"
+                              >View</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              href="#"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editArtikel.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editArtikel.html"
+                              >Unpublish</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

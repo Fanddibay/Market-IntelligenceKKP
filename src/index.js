@@ -194,3 +194,26 @@ adminApiToggle.addEventListener("click", () => {
     });
   }
 });
+
+// active link in different pages
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".active-side")?.forEach((element) => {
+      element.classList.remove("active-side");
+    });
+
+    link.classList.add("active-side");
+  });
+});
+
+const currentPath = window.location.pathname;
+
+navLinks.forEach((link) => {
+  const linkPath = link.getAttribute("href");
+
+  if (currentPath.includes(linkPath) && linkPath !== "/") {
+    link.classList.add("active-side");
+  }
+});
