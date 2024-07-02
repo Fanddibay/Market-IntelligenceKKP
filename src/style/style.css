@@ -737,7 +737,6 @@ button.slick-arrow {
   padding: 24px;
   background-color: var(--btn-primary);
   height: 100vh;
-  position: fixed !important;
 }
 
 .sidebar-dashboard ul li a {
