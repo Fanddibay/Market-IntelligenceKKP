@@ -1051,7 +1051,6 @@ button.slick-arrow {
 }
 
 .sidebar-admin {
-  width: 240px !important;
   min-width: 240px !important;
   min-height: 100vh !important;
 
