@@ -35,10 +35,10 @@
     />
 
     <div class="d-block d-sm-block d-lg-flex">
-      <div
-        class="col-2 d-none d-sm-none d-md-none d-lg-block bg-blue p-3 text-white sidebar-admin"
+      <aside
+        class="d-none d-sm-none d-md-none d-lg-block bg-blue p-3 text-white sidebar-admin sticky-top"
       >
-        <div class="position-fixed">
+        <div class="sticky-top overflow-auto">
           <div class="d-flex align-items-center pb-4">
             <img src="assets/logo-sidebar.png" alt="" />
           </div>
@@ -84,29 +84,31 @@
             </div>
           </ul>
         </div>
-      </div>
-      <div class="col-12 col-sm-12 col-lg-10">
+      </aside>
+      <div class="w-100">
         <!-- navbar -->
         <nav
           class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-2 px-sm-5 w-100"
         >
           <img src="assets/logo.png" alt="" />
-          <div class="d-flex align-items-center gap-4">
-            <img
-              src="https://via.placeholder.com/30"
-              alt="Avatar"
-              class="rounded-circle img-fluid"
-            />
+          <div class="d-flex gap-4">
+            <div class="d-flex align-items-center gap-4">
+              <img
+                src="https://via.placeholder.com/30"
+                alt="Avatar"
+                class="rounded-circle img-fluid"
+              />
+            </div>
+            <button
+              class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <i class="fas fa-bars py-2"></i>
+            </button>
           </div>
-          <button
-            class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <i class="fas fa-bars py-2"></i>
-          </button>
         </nav>
         <div class="d-block d-sm-block d-lg-none">
           <nav class="navbar position-absolute">
@@ -166,7 +168,7 @@
           </nav>
         </div>
         <!-- sidebar mobile -->
-        <div class="d-sm-block d-block d-md-none">
+        <aside class="d-sm-block d-block d-md-block">
           <nav class="navbar position-absolute">
             <div class="container-fluid">
               <div
@@ -222,7 +224,7 @@
               </div>
             </div>
           </nav>
-        </div>
+        </aside>
         <!-- content -->
         <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
           <div class="mt-5">
@@ -356,122 +358,123 @@
               </div>
             </div>
             <div class="d-none" id="uncomDiv">
-              <div
-                class="bg-white col-12 col-lg-9 gap-5 justify-content-between p-3"
-              >
-                <h6 class="fw-bold mb-1 fs-5">
-                  Unggah data dari masing masing file berikut
-                </h6>
-                <p class="text-black-50 text-light">
-                  Unggah data dari masing masing file berikut
-                </p>
-                <div class="d-flex gap-4 my-4 justify-content-between">
-                  <div class="col-12">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Subject</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Data Comtrade 2024"
-                    />
-                  </div>
-                </div>
-
-                <div class="mt-4">
-                  <div class="mb-1">
-                    Upload Image <span class="text-danger">*</span>
-                  </div>
-                  <div class="card-body">
-                    <div
-                      id="dropZone"
-                      class="mb-3"
-                      ondragover="handleDragOver(event)"
-                      ondragleave="handleDragLeave(event)"
-                      ondrop="handleDrop(event)"
-                    >
-                      <p class="mb-0 mt-5">
-                        <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
-                        Drop here to attach or upload
-                      </p>
+              <div class="d-block d-sm-block d-lg-flex gap-4">
+                <div
+                  class="bg-white col-12 col-lg-9 gap-5 justify-content-between p-3"
+                >
+                  <h6 class="fw-bold mb-1 fs-5">
+                    Unggah data dari masing masing file berikut
+                  </h6>
+                  <p class="text-black-50 text-light">
+                    Unggah data dari masing masing file berikut
+                  </p>
+                  <div class="d-flex gap-4 my-4 justify-content-between">
+                    <div class="col-12">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Subject</label
+                      >
                       <input
-                        type="file"
-                        id="fileInput"
-                        accept="image/*"
-                        style="display: none"
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Data Comtrade 2024"
                       />
                     </div>
-                    <p class="text-muted mb-0">Max size: 10 MB</p>
                   </div>
-                </div>
-                <div class="mt-4">
-                  <hr />
-                  <div class="justify-content-end mt-4 text-end d-flex gap-4">
-                    <a
-                      href="#"
-                      class="btn btn-primary"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop1"
-                      >Uplod Data</a
+
+                  <div class="mt-4">
+                    <div class="mb-1">
+                      Upload Image <span class="text-danger">*</span>
+                    </div>
+                    <div class="card-body">
+                      <div
+                        id="dropZone"
+                        class="mb-3"
+                        ondragover="handleDragOver(event)"
+                        ondragleave="handleDragLeave(event)"
+                        ondrop="handleDrop(event)"
+                      >
+                        <p class="mb-0 mt-5">
+                          <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
+                          Drop here to attach or upload
+                        </p>
+                        <input
+                          type="file"
+                          id="fileInput"
+                          accept="image/*"
+                          style="display: none"
+                        />
+                      </div>
+                      <p class="text-muted mb-0">Max size: 10 MB</p>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <hr />
+                    <div class="justify-content-end mt-4 text-end d-flex gap-4">
+                      <a
+                        href="#"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop1"
+                        >Uplod Data</a
+                      >
+                    </div>
+                    <!-- Modal -->
+                    <div
+                      class="modal fade"
+                      id="staticBackdrop1"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true"
                     >
-                  </div>
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="staticBackdrop1"
-                    data-bs-backdrop="static"
-                    data-bs-keyboard="false"
-                    tabindex="-1"
-                    aria-labelledby="staticBackdropLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-dialog-centered mx-auto">
-                      <div class="modal-content text-center">
-                        <div class="modal-header">
-                          <div></div>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div
-                          class="modal-body text-center justify-content-center mx-auto"
-                        >
-                          <h1
-                            class="modal-title fs-3 fw-bold"
-                            id="staticBackdropLabel"
+                      <div class="modal-dialog modal-dialog-centered mx-auto">
+                        <div class="modal-content text-center">
+                          <div class="modal-header">
+                            <div></div>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div
+                            class="modal-body text-center justify-content-center mx-auto"
                           >
-                            Anda yakin?
-                          </h1>
-                          Apakah anda yakin untuk update file ini? file ini
-                          belum diselesaikan
-                        </div>
-                        <div class="modal-footer gap-3">
-                          <button
-                            type="button"
-                            class="btn btn-outline-primary"
-                            data-bs-dismiss="modal"
-                          >
-                            Batal
-                          </button>
-                          <button type="button" class="btn btn-primary">
-                            Update
-                          </button>
+                            <h1
+                              class="modal-title fs-3 fw-bold"
+                              id="staticBackdropLabel"
+                            >
+                              Anda yakin?
+                            </h1>
+                            Apakah anda yakin untuk update file ini? file ini
+                            belum diselesaikan
+                          </div>
+                          <div class="modal-footer gap-3">
+                            <button
+                              type="button"
+                              class="btn btn-outline-primary"
+                              data-bs-dismiss="modal"
+                            >
+                              Batal
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Update
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="bg-white col-12 col-lg-3 p-3 h-25 mt-5 mt-lg-0">
-                <h5 class="fs-5 fw-bold mb-2">Upload File</h5>
-                <p class="fs-6 text-black-50">
-                  There are three different section on this page. Product
-                  details, Product variants and Product pack sizes.
-                </p>
+                <div class="bg-white col-12 col-lg-3 p-3 h-25 mt-5 mt-lg-0">
+                  <h5 class="fs-5 fw-bold mb-2">Unggah File</h5>
+                  <p class="fs-6 text-black-50">
+                    Unggah data dari masing masing file berikut
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -507,7 +510,7 @@
               </div>
             </div>
           </div>
-          <div class="uplod card p-3 mt-4 d-none overflow-auto" id="uplodTable">
+          <div class="card p-3 mt-4 d-none overflow-auto" id="uplodTable">
             <table class="table table-striped">
               <thead>
                 <tr>

@@ -35,85 +35,89 @@
     />
     <div class="">
       <div class="d-block d-sm-block d-lg-flex">
-        <div
-          class="d-none d-sm-none d-lg-block col-2 bg-blue p-3 text-white sidebar-admin overflow-auto"
+        <aside
+          class="sticky-top d-none d-sm-none d-md-none d-lg-block bg-blue p-3 text-white sidebar-admin"
         >
-          <div class="position-fixed">
-            <div class="d-flex align-items-center pb-4">
-              <img src="assets/logo-sidebar.png" alt="" />
-            </div>
-            <ul class="list-unstyled text h-50">
-              <li class="nav-link active">
-                <a href="artikelDashboard.html" class="d-block p-2">
-                  <i class="fa-solid fa-file-lines"></i> Artikel</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="ebook.html" class="d-block p-2"
-                  ><i class="fa-solid fa-book"></i> E-Book</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Unggah</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="download.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Download</a
-                >
-              </li>
-
-              <li class="nav-link">
-                <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Menejemen User</a
-                >
-              </li>
-              <li class="nav-link mb-5">
-                <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Peran</a
-                >
-              </li>
-              <div class="pt-5">
-                <li class="nav-link mt-5">
-                  <a href="index.html" class="d-block p-2"
-                    ><i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    Keluar</a
+          <div class="sticky-top overflow-auto">
+            <div class="">
+              <div class="d-flex align-items-center pb-4">
+                <img src="assets/logo-sidebar.png" alt="" />
+              </div>
+              <ul class="list-unstyled text h-50">
+                <li class="nav-link active">
+                  <a href="artikelDashboard.html" class="d-block p-2">
+                    <i class="fa-solid fa-file-lines"></i> Artikel</a
                   >
                 </li>
-              </div>
-            </ul>
+                <li class="nav-link">
+                  <a href="ebook.html" class="d-block p-2">
+                    <i class="fa-solid fa-book"></i> E-Book</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a href="uplod.html" class="d-block p-2">
+                    <i class="fa-solid fa-upload"></i> Unggah</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a href="download.html" class="d-block p-2">
+                    <i class="fa-solid fa-user"></i> Download</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a href="admin.html" class="d-block p-2">
+                    <i class="fa-solid fa-user"></i> Menejemen User</a
+                  >
+                </li>
+                <li class="nav-link mb-5">
+                  <a href="roleManagement.html" class="d-block p-2">
+                    <i class="fa-solid fa-user-cog"></i> Peran</a
+                  >
+                </li>
+                <div class="pt-5">
+                  <li class="nav-link mt-5">
+                    <a href="index.html" class="d-block p-2">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      Keluar</a
+                    >
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-12 col-lg-10">
+        </aside>
+
+        <div class="w-100">
           <!-- navbar -->
           <nav
-            class="navbar justify-content-between bg-white px-lg-5 px-1 w-100"
+            class="navbar navbar-expand-sm justify-content-between bg-light px-lg-5 px-1 w-100"
           >
             <img src="assets/logo.png" alt="" />
-            <div class="d-flex align-items-center gap-4">
-              <img
-                src="https://via.placeholder.com/30"
-                alt="Avatar"
-                class="rounded-circle img-fluid"
-              />
+            <div class="d-flex gap-4">
+              <div class="d-flex align-items-center gap-4">
+                <img
+                  src="https://via.placeholder.com/30"
+                  alt="Avatar"
+                  class="rounded-circle img-fluid"
+                />
+              </div>
+              <button
+                class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <i class="fas fa-bars py-2"></i>
+              </button>
             </div>
-            <button
-              class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none d-lg-none"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-            >
-              <i class="fas fa-bars py-2"></i>
-            </button>
           </nav>
           <!-- sidebar mobile -->
           <div class="d-sm-block d-block d-lg-none">
             <nav class="navbar position-absolute">
               <div class="container-fluid">
                 <div
-                  class="offcanvas offcanvas-end bg-primary"
+                  class="offcanvas offcanvas-end"
                   tabindex="-1"
                   id="offcanvasNavbar"
                   aria-labelledby="offcanvasNavbarLabel"
@@ -179,7 +183,7 @@
             <div class="overflow-auto">
               <table
                 id="example"
-                class="table table-striped table-custom bg-white rounded-3"
+                class="table table-striped table-custom bg-white rounded-3 w-100"
               >
                 <thead>
                   <tr class="text-secondary">

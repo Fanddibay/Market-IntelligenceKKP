@@ -1051,8 +1051,10 @@ button.slick-arrow {
 }
 
 .sidebar-admin {
-  min-width: 230px !important;
+  width: 240px !important;
+  min-width: 240px !important;
   min-height: 100vh !important;
+
   position: relative;
   background-color: var(--btn-primary) !important;
 }
