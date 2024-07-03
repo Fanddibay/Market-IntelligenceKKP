@@ -34,13 +34,15 @@
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
     />
     <div class="">
-      <div class="d-flex">
-        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
+      <div class="d-block d-sm-block d-lg-flex">
+        <div
+          class="d-none d-sm-none d-lg-block col-2 bg-blue p-3 text-white sidebar-admin overflow-auto"
+        >
           <div class="position-fixed">
             <div class="d-flex align-items-center pb-4">
               <img src="assets/logo-sidebar.png" alt="" />
             </div>
-            <ul class="list-unstyled text">
+            <ul class="list-unstyled text h-50">
               <li class="nav-link active">
                 <a href="artikelDashboard.html" class="d-block p-2">
                   <i class="fa-solid fa-file-lines"></i> Artikel</a
@@ -67,45 +69,114 @@
                   ><i class="fa-solid fa-user"></i> Menejemen User</a
                 >
               </li>
-              <li class="nav-link">
+              <li class="nav-link mb-5">
                 <a href="roleManagement.html" class="d-block p-2"
                   ><i class="fa-solid fa-user-cog"></i> Peran</a
                 >
               </li>
+              <div class="pt-5">
+                <li class="nav-link mt-5">
+                  <a href="index.html" class="d-block p-2"
+                    ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Keluar</a
+                  >
+                </li>
+              </div>
             </ul>
-            <div class="logout-submenu">
-              <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
-              >
-            </div>
           </div>
         </div>
-        <div class="col-10">
+        <div class="col-12 col-sm-12 col-lg-10">
           <!-- navbar -->
-          <div
-            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
+          <nav
+            class="navbar justify-content-between bg-white px-lg-5 px-1 w-100"
           >
             <img src="assets/logo.png" alt="" />
             <div class="d-flex align-items-center gap-4">
-              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
               <img
                 src="https://via.placeholder.com/30"
                 alt="Avatar"
                 class="rounded-circle img-fluid"
               />
             </div>
+            <button
+              class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <i class="fas fa-bars py-2"></i>
+            </button>
+          </nav>
+          <!-- sidebar mobile -->
+          <div class="d-sm-block d-block d-lg-none">
+            <nav class="navbar position-absolute">
+              <div class="container-fluid">
+                <div
+                  class="offcanvas offcanvas-end bg-primary"
+                  tabindex="-1"
+                  id="offcanvasNavbar"
+                  aria-labelledby="offcanvasNavbarLabel"
+                >
+                  <div class="offcanvas-body text-white sidebar-admin">
+                    <div class="d-flex align-items-center pb-4">
+                      <img src="assets/logo-sidebar.png" alt="" />
+                    </div>
+                    <ul class="list-unstyled text">
+                      <li class="nav-link active">
+                        <a href="artikelDashboard.html" class="d-block p-2">
+                          <i class="fa-solid fa-file-lines"></i> Artikel</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="ebook.html" class="d-block p-2"
+                          ><i class="fa-solid fa-book"></i> E-Book</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="uplod.html" class="d-block p-2"
+                          ><i class="fa-solid fa-upload"></i> Unggah</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="download.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user"></i> Download</a
+                        >
+                      </li>
+
+                      <li class="nav-link">
+                        <a href="admin.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user"></i> Menejemen User</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="roleManagement.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user-cog"></i> Peran</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="index.html" class="d-block p-2"
+                          ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                          Keluar</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
           </div>
           <!-- content -->
-          <div class="px-5 mt-4 w-100">
-            <h5 class="fw-bold fs-4">Artikel</h5>
-            <div class="justify-content-end text-end">
+          <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
+            <div class="d-flex align-items-center justify-content-between">
+              <h5 class="fw-bold fs-4">Artikel</h5>
               <a
                 href="addArtikel.html"
                 class="rounded-1 px-4 btn btn-outline-primary"
                 >Add</a
               >
             </div>
-            <div class="">
+            <div class="overflow-auto">
               <table
                 id="example"
                 class="table table-striped table-custom bg-white rounded-3"

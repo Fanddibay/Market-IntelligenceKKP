@@ -15,6 +15,12 @@
         "duplicate-id": "off"
       }
     ],
-    "button-type": "off"
+    "button-type": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ]
   }
 }

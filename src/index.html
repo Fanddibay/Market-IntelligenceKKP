@@ -22,43 +22,34 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg shadow-sm">
-      <div class="container-fluid px-25">
-        <a class="navbar-brand d-none d-md-block" href="index.html">
-          <img src="assets/logo.png" alt="" />
-        </a>
-        <a class="navbar-brand d-block d-md-none" href="#">
-          <img src="assets/logoMobile.png" alt="" />
-        </a>
-        <div class="ms-auto ms-md-0 d-block d-md-none me-2">
-          <button
-            type="button"
-            class="text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-3"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Login
-          </button>
-        </div>
+
+    <!-- end navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container mx-auto">
+        <a class="navbar-brand" href="#"
+          ><img src="assets/logo.png" alt=""
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarText"
-        >
-          <ul class="navbar-nav mb-2 mb-lg-0 text-center mt-3 mt-md-0">
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav mx-auto my-2 my-lg-0"
+            style="--bs-scroll-height: 100px"
+          >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artikel">Artikel</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -88,32 +79,27 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#artikel">Artikel</a>
-            </li>
+
             <li class="nav-item">
               <a class="nav-link" href="#statistik">Statistik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#ebook">E-Book</a>
+              <a class="nav-link" href="E-Book">E-Book</a>
             </li>
           </ul>
-        </div>
-        <div class="mx-auto ms-md-0 d-none d-md-block">
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-4 w-100"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Login
-          </button>
+          <form class="d-flex" role="search">
+            <button
+              type="button"
+              class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-4 w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Login
+            </button>
+          </form>
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
-
     <!-- Modal -->
     <div
       class="modal fade"
@@ -189,32 +175,41 @@
     </div>
 
     <!-- hero -->
-    <section>
-      <div class="hero container-fluid mb-5">
+    <section class="w-100 hero">
+      <div class="container mb-5 mx-auto">
         <div class="px-25">
-          <h1 class="fw-bold text-black mb-4 hero-text">
-            Discover How We Can Elevate <br class="d-block d-md-none" /><br
-              class="d-none d-md-block"
+          <div class="d-block d-md-flex">
+            <div>
+              <h1 class="fw-bold text-black mb-4 hero-text">
+                Discover How We Can Elevate <br class="d-block d-md-none" /><br
+                  class="d-none d-md-block"
+                />
+                Your
+                <span class="">Exports</span>
+              </h1>
+              <a href="#komoditas" class="btn btn-lg btn-darkblue"
+                >Get Started
+                <span class="ms-1"
+                  ><i class="fa-solid fa-arrow-right text-white"></i></span
+              ></a>
+            </div>
+            <img
+              src="assets/hero1.png"
+              class="w-25 d-none d-lg-block d-sm-none"
+              alt=""
             />
-            Your
-            <span class="">Exports</span>
-          </h1>
-          <a href="#komoditas" class="btn btn-lg btn-darkblue"
-            >Get Started
-            <span class="ms-1"
-              ><i class="fa-solid fa-arrow-right text-white"></i></span
-          ></a>
+          </div>
         </div>
         <!-- komoditas -->
         <div class="komoditas z-5 mt-5 pt-5 d-none d-md-block" id="komoditas">
-          <div class="container-fluid px-25 mt-5">
+          <div class="container px-25 mt-5">
             <h5 class="mb-3 ms-2">Komoditas</h5>
             <div class="row">
               <div class="col">
                 <!-- Markup untuk carousel -->
                 <div class="slick-carousel">
                   <div class="komoditasTitle position-relative">
-                    <div class="position-absolute bottom-0 pb-4">
+                    <div class="position-absolute pb-4">
                       <div class="komoditasTranslate mb-3">
                         <h5 class="mb-3">Lobster</h5>
                         <p class="">
@@ -330,116 +325,121 @@
     </section>
     <!-- end hero -->
     <!-- komoditas -->
-    <div class="komoditas z-5 mt-5 pt-5 d-block d-md-none" id="komoditas">
-      <div class="container-fluid px-25 mt-5">
-        <h5 class="mb-3 ms-2">Komoditas</h5>
-        <div class="row">
-          <div class="col">
-            <!-- Markup untuk carousel -->
-            <div class="slick-carousel">
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Lobster</h5>
-                    <p class="">
-                      Indonesia sebagai negara kepulauan dengan perairan yang
-                      kaya akan sumber daya alam, memiliki potensi ekspor
-                      udang yang sangat menjanjikan.
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+    <section class="w-100">
+      <div
+        class="komoditas z-5 mt-5 pt-5 d-block d-sm-none container mx-auto"
+        id="komoditas"
+      >
+        <div class="container px-25 mt-5">
+          <h5 class="mb-3 ms-2">Komoditas</h5>
+          <div class="row">
+            <div class="col">
+              <!-- Markup untuk carousel -->
+              <div class="slick-carousel">
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Lobster</h5>
+                      <p class="">
+                        Indonesia sebagai negara kepulauan dengan perairan yang
+                        kaya akan sumber daya alam, memiliki potensi ekspor
+                        udang yang sangat menjanjikan.
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/lobster.png" alt="" />
                 </div>
-                <img src="assets/lobster.png" alt="" />
-              </div>
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Udang</h5>
-                    <p class="">
-                      Indonesia sebagai negara kepulauan dengan perairan yang
-                      kaya akan sumber daya alam, memiliki potensi ekspor
-                      udang yang sangat menjanjikan.
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Udang</h5>
+                      <p class="">
+                        Indonesia sebagai negara kepulauan dengan perairan yang
+                        kaya akan sumber daya alam, memiliki potensi ekspor
+                        udang yang sangat menjanjikan.
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/komoditas5.png" alt="" />
                 </div>
-                <img src="assets/komoditas5.png" alt="" />
-              </div>
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Tuna</h5>
-                    <p class="">
-                      Indonesia sebagai negara kepulauan dengan perairan yang
-                      kaya akan sumber daya alam, memiliki potensi ekspor
-                      udang yang sangat menjanjikan.
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Tuna</h5>
+                      <p class="">
+                        Indonesia sebagai negara kepulauan dengan perairan yang
+                        kaya akan sumber daya alam, memiliki potensi ekspor
+                        udang yang sangat menjanjikan.
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/komoditas6.png" alt="" />
                 </div>
-                <img src="assets/komoditas6.png" alt="" />
-              </div>
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Tilapia</h5>
-                    <p class="">
-                      Indonesia berhasil memasok lebih dari 16% total produksi
-                      dunia dengan rata-rata produksi tuna, cakalang dan tongkol
-                      Indonesia mencapai lebih dari 1,2 juta ton/tahun
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Tilapia</h5>
+                      <p class="">
+                        Indonesia berhasil memasok lebih dari 16% total produksi
+                        dunia dengan rata-rata produksi tuna, cakalang dan
+                        tongkol Indonesia mencapai lebih dari 1,2 juta ton/tahun
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/tilapia.png" alt="" />
                 </div>
-                <img src="assets/tilapia.png" alt="" />
-              </div>
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Rumput Laut</h5>
-                    <p class="">
-                      Indonesia adalah negara terbesar kelima di dunia yang
-                      mengekspor produk Kepiting pasar global.
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Rumput Laut</h5>
+                      <p class="">
+                        Indonesia adalah negara terbesar kelima di dunia yang
+                        mengekspor produk Kepiting pasar global.
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/RumputLaut.png" alt="" />
                 </div>
-                <img src="assets/RumputLaut.png" alt="" />
-              </div>
-              <div class="komoditasTitle position-relative">
-                <div class="position-absolute bottom-0 pb-4">
-                  <div class="komoditasTranslate mb-3">
-                    <h5 class="mb-3">Kepiting</h5>
-                    <p class="">
-                      Indonesia adalah negara terbesar kelima di dunia yang
-                      mengekspor produk Kepiting pasar global.
-                    </p>
-                    <div class="text-end">
-                      <a href="#" class="btn btn-primary btn-sm">See more</a>
+                <div class="komoditasTitle position-relative">
+                  <div class="position-absolute bottom-0 pb-4">
+                    <div class="komoditasTranslate mb-3">
+                      <h5 class="mb-3">Kepiting</h5>
+                      <p class="">
+                        Indonesia adalah negara terbesar kelima di dunia yang
+                        mengekspor produk Kepiting pasar global.
+                      </p>
+                      <div class="text-end">
+                        <a href="#" class="btn btn-primary btn-sm">See more</a>
+                      </div>
                     </div>
                   </div>
+                  <img src="assets/kepiting.png" alt="" />
                 </div>
-                <img src="assets/kepiting.png" alt="" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- end komoditas -->
     <!-- artikel -->
-    <section class="artikel mt-5 container-fluid" id="artikel">
-      <div class="px-25">
+    <section class="artikel mt-5 w-100" id="artikel">
+      <div class="px-25 container mx-auto">
         <div class="ms-2 mb-3">
           <h5>Artikel</h5>
           <p>Artikel Terkait Ekspor di Indonesia</p>
@@ -603,7 +603,7 @@
     <!-- end artikel -->
 
     <!-- tabel informasi -->
-    <section class="data container-fluid" id="statistik">
+    <section class="data container mx-auto" id="statistik">
       <div class="px-25">
         <h5>Data & Informasi</h5>
         <p>Grafik dan Tabel Data Nilai Ekspor Terkini</p>
@@ -791,7 +791,7 @@
     <!-- end tabel informasi -->
 
     <!-- e-book -->
-    <section class="ebook mt-5 container-fluid" id="ebook">
+    <section class="ebook mt-5 container mx-auto" id="ebook">
       <div class="px-25">
         <h5>E-BOOK</h5>
         <p class="mb-3">E-Book Data Ekspor Terbaru</p>
@@ -930,86 +930,88 @@
     <!-- end e-book -->
 
     <!-- footer -->
-    <footer class="px-25 py-3 mt-5 container-fluid">
-      <div>
-        <div class="d-flex gap-4 align-items-center pt-4">
-          <img src="assets/logoKemendagri.png" class="img-fluid" alt="" />
-          <img src="assets/logoSimple.png" alt="" class="mb-2 img-fluid" />
+    <footer class="px-25 py-3 mt-5 w-100">
+      <div class="container mx-auto">
+        <div class="">
+          <div class="d-flex gap-4 align-items-center pt-4">
+            <img src="assets/logoKemendagri.png" class="img-fluid" alt="" />
+            <img src="assets/logoSimple.png" alt="" class="mb-2 img-fluid" />
+          </div>
+          <div
+            class="justify-content-between align-items-center d-md-flex d-block mt-4"
+          >
+            <div class="mt-md-0 mt-1">
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Et lorem aliquam urna
+                faucibus <br />
+                molestie. Eu ipsum aenean sociis consequat fringilla. Adipiscing
+                orci risus lacus <br />
+                felis neque sit. Egestas nulla tristique est consequat risus sit
+                sapien ullamcorper.
+              </p>
+            </div>
+
+            <div class="d-flex gap-4 mt-md-0 mt-4 mb-4">
+              <a href="#"> <img src="assets/facebook.svg" alt="" /></a>
+              <a href="#"> <img src="assets/twitter.svg" alt="" /></a>
+              <a href="#"> <img src="assets/Instagram.svg" alt="" /></a>
+            </div>
+          </div>
         </div>
         <div
-          class="justify-content-between align-items-center d-md-flex d-block mt-4"
+          class="d-md-flex justify-content-md-between d-block mt-5 d-md-block d-none"
         >
-          <div class="mt-md-0 mt-1">
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Et lorem aliquam urna
-              faucibus <br />
-              molestie. Eu ipsum aenean sociis consequat fringilla. Adipiscing
-              orci risus lacus <br />
-              felis neque sit. Egestas nulla tristique est consequat risus sit
-              sapien ullamcorper.
-            </p>
+          <div class="d-flex gap-3 gap-md-4">
+            <div class="d-flex gap-2">
+              <img src="assets/phone.svg" alt="" />
+              <p>Telepon: (021)</p>
+            </div>
+            <div class="d-flex gap-2">
+              <img src="assets/mail.svg" alt="" />
+              <p>Layanan Kontak Kami</p>
+            </div>
           </div>
-
-          <div class="d-flex gap-4 mt-md-0 mt-4 mb-4">
-            <a href="#"> <img src="assets/facebook.svg" alt="" /></a>
-            <a href="#"> <img src="assets/twitter.svg" alt="" /></a>
-            <a href="#"> <img src="assets/Instagram.svg" alt="" /></a>
+          <div class="d-flex gap-4">
+            <div class="d-flex gap-2">
+              <img src="assets/database.svg" alt="" />
+              <p>Data & Informasi</p>
+            </div>
+            <div class="d-flex gap-2 align-items-center">
+              <img src="assets/faq.svg" alt="" />
+              <p>FAQ</p>
+            </div>
+            <div class="d-flex gap-2">
+              <img src="assets/callcenter.svg" alt="" />
+              <p>Help Center</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="d-md-flex justify-content-md-between d-block mt-5 d-md-block d-none"
-      >
-        <div class="d-flex gap-3 gap-md-4">
-          <div class="d-flex gap-2">
+        <div class="d-block d-md-none mt-3 mx-auto">
+          <div class="d-flex mt-3 gap-2">
             <img src="assets/phone.svg" alt="" />
             <p>Telepon: (021)</p>
           </div>
-          <div class="d-flex gap-2">
+          <div class="d-flex mt-3 gap-2">
             <img src="assets/mail.svg" alt="" />
             <p>Layanan Kontak Kami</p>
           </div>
-        </div>
-        <div class="d-flex gap-4">
-          <div class="d-flex gap-2">
+          <div class="d-flex mt-3 gap-2">
             <img src="assets/database.svg" alt="" />
             <p>Data & Informasi</p>
           </div>
-          <div class="d-flex gap-2 align-items-center">
+          <div class="d-flex mt-3 gap-2 align-items-center">
             <img src="assets/faq.svg" alt="" />
             <p>FAQ</p>
           </div>
-          <div class="d-flex gap-2">
+          <div class="d-flex gap-2 mt-3">
             <img src="assets/callcenter.svg" alt="" />
             <p>Help Center</p>
           </div>
         </div>
-      </div>
-      <div class="d-block d-md-none mt-3 mx-auto">
-        <div class="d-flex mt-3 gap-2">
-          <img src="assets/phone.svg" alt="" />
-          <p>Telepon: (021)</p>
+        <div class="text-center mt-5 py-4">
+          <hr class="mb-3" />
+          © Hak Cipta 2024 <span class="fw-bold">Market Intelligence</span>
         </div>
-        <div class="d-flex mt-3 gap-2">
-          <img src="assets/mail.svg" alt="" />
-          <p>Layanan Kontak Kami</p>
-        </div>
-        <div class="d-flex mt-3 gap-2">
-          <img src="assets/database.svg" alt="" />
-          <p>Data & Informasi</p>
-        </div>
-        <div class="d-flex mt-3 gap-2 align-items-center">
-          <img src="assets/faq.svg" alt="" />
-          <p>FAQ</p>
-        </div>
-        <div class="d-flex gap-2 mt-3">
-          <img src="assets/callcenter.svg" alt="" />
-          <p>Help Center</p>
-        </div>
-      </div>
-      <div class="text-center mt-5 py-4">
-        <hr class="mb-3" />
-        © Hak Cipta 2024 <span class="fw-bold">Market Intelligence</span>
       </div>
     </footer>
     <!-- end footer -->

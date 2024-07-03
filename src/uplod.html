@@ -33,80 +33,212 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
     />
-    <div class="">
-      <div class="d-flex">
-        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
-          <div class="position-fixed">
-            <div class="d-flex align-items-center pb-4">
-              <img src="assets/logo-sidebar.png" alt="" />
-            </div>
-            <ul class="list-unstyled text">
-              <li class="nav-link">
-                <a href="artikelDashboard.html" class="d-block p-2">
-                  <i class="fa-solid fa-file-lines"></i> Artikel</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="ebook.html" class="d-block p-2"
-                  ><i class="fa-solid fa-book"></i> E-Book</a
-                >
-              </li>
-              <li class="nav-link active">
-                <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Unggah</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="download.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Download</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Menejemen User</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Peran</a
-                >
-              </li>
-            </ul>
-            <div class="logout-submenu">
-              <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a
-              >
-            </div>
+
+    <div class="d-block d-sm-block d-lg-flex">
+      <div
+        class="col-2 d-none d-sm-none d-md-none d-lg-block bg-blue p-3 text-white sidebar-admin"
+      >
+        <div class="position-fixed">
+          <div class="d-flex align-items-center pb-4">
+            <img src="assets/logo-sidebar.png" alt="" />
           </div>
+          <ul class="list-unstyled text h-50">
+            <li class="nav-link">
+              <a href="artikelDashboard.html" class="d-block p-2">
+                <i class="fa-solid fa-file-lines"></i> Artikel</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="ebook.html" class="d-block p-2"
+                ><i class="fa-solid fa-book"></i> E-Book</a
+              >
+            </li>
+            <li class="nav-link active">
+              <a href="uplod.html" class="d-block p-2"
+                ><i class="fa-solid fa-upload"></i> Unggah</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="download.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Download</a
+              >
+            </li>
+
+            <li class="nav-link">
+              <a href="admin.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Menejemen User</a
+              >
+            </li>
+            <li class="nav-link mb-5">
+              <a href="roleManagement.html" class="d-block p-2"
+                ><i class="fa-solid fa-user-cog"></i> Peran</a
+              >
+            </li>
+            <div class="pt-5">
+              <li class="nav-link mt-5">
+                <a href="index.html" class="d-block p-2"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Keluar</a
+                >
+              </li>
+            </div>
+          </ul>
         </div>
-        <div class="col-10">
-          <!-- navbar -->
-          <div
-            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
-          >
-            <img src="assets/logo.png" alt="" />
-            <div class="d-flex align-items-center gap-4">
-              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
-              <img
-                src="https://via.placeholder.com/30"
-                alt="Avatar"
-                class="rounded-circle img-fluid"
-              />
-            </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-10">
+        <!-- navbar -->
+        <nav
+          class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-2 px-sm-5 w-100"
+        >
+          <img src="assets/logo.png" alt="" />
+          <div class="d-flex align-items-center gap-4">
+            <img
+              src="https://via.placeholder.com/30"
+              alt="Avatar"
+              class="rounded-circle img-fluid"
+            />
           </div>
-          <!-- content -->
-          <div class="px-5 mt-4">
-            <div class="mt-5">
-              <h5 class="fw-bold mb-4 fs-4">Uplod Data</h5>
-              <ul
-                class="d-flex gap-4 items-center list-unstyled mb-3 uplodDataLink"
+          <button
+            class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="fas fa-bars py-2"></i>
+          </button>
+        </nav>
+        <div class="d-block d-sm-block d-lg-none">
+          <nav class="navbar position-absolute">
+            <div class="container-fluid">
+              <div
+                class="offcanvas offcanvas-end bg-primary"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
               >
-                <li><a href="#" id="bps" class="active">BPS</a></li>
-                <li><a href="#" id="uncom">KNIME</a></li>
-              </ul>
-              <!-- content -->
-              <div class="d-flex gap-4 d-block" id="bpsDiv">
-                <div class="bg-white p-4 w-75">
+                <div class="offcanvas-body text-white sidebar-admin">
+                  <div class="d-flex align-items-center pb-4">
+                    <img src="assets/logo-sidebar.png" alt="" />
+                  </div>
+                  <ul class="list-unstyled text">
+                    <li class="nav-link">
+                      <a href="artikelDashboard.html" class="d-block p-2">
+                        <i class="fa-solid fa-file-lines"></i> Artikel</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="ebook.html" class="d-block p-2"
+                        ><i class="fa-solid fa-book"></i> E-Book</a
+                      >
+                    </li>
+                    <li class="nav-link active">
+                      <a href="uplod.html" class="d-block p-2"
+                        ><i class="fa-solid fa-upload"></i> Unggah</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="download.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Download</a
+                      >
+                    </li>
+
+                    <li class="nav-link">
+                      <a href="admin.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Menejemen User</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="roleManagement.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user-cog"></i> Peran</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="index.html" class="d-block p-2"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Keluar</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- sidebar mobile -->
+        <div class="d-sm-block d-block d-md-none">
+          <nav class="navbar position-absolute">
+            <div class="container-fluid">
+              <div
+                class="offcanvas offcanvas-end bg-primary"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-body text-white sidebar-admin">
+                  <div class="d-flex align-items-center pb-4">
+                    <img src="assets/logo-sidebar.png" alt="" />
+                  </div>
+                  <ul class="list-unstyled text">
+                    <li class="nav-link">
+                      <a href="artikelDashboard.html" class="d-block p-2">
+                        <i class="fa-solid fa-file-lines"></i> Artikel</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="ebook.html" class="d-block p-2"
+                        ><i class="fa-solid fa-book"></i> E-Book</a
+                      >
+                    </li>
+                    <li class="nav-link active">
+                      <a href="uplod.html" class="d-block p-2"
+                        ><i class="fa-solid fa-upload"></i> Unggah</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="download.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Download</a
+                      >
+                    </li>
+
+                    <li class="nav-link">
+                      <a href="admin.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Menejemen User</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="roleManagement.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user-cog"></i> Peran</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="index.html" class="d-block p-2"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Keluar</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- content -->
+        <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
+          <div class="mt-5">
+            <h5 class="fw-bold mb-4 fs-4">Uplod Data</h5>
+            <ul
+              class="d-flex gap-4 items-center list-unstyled mb-3 uplodDataLink"
+            >
+              <li><a href="#" id="bps" class="active">BPS</a></li>
+              <li><a href="#" id="uncom">KNIME</a></li>
+            </ul>
+            <!-- content -->
+            <div class="" id="bpsDiv">
+              <div class="d-block d-sm-block d-lg-flex gap-4">
+                <div
+                  class="bg-white col-12 col-lg-9 gap-5 justify-content-between p-3"
+                >
                   <h6 class="fw-bold mb-1 fs-5">Upload Data BPS</h6>
                   <p class="text-black-50 text-light">
                     Please provide details of this file.
@@ -177,13 +309,8 @@
                     >
                       <div class="modal-dialog modal-dialog-centered mx-auto">
                         <div class="modal-content text-center">
-                          <div class="modal-header te">
-                            <h1
-                              class="modal-title fs-5"
-                              id="staticBackdropLabel"
-                            >
-                              Are you sure?
-                            </h1>
+                          <div class="modal-header">
+                            <div></div>
                             <button
                               type="button"
                               class="btn-close"
@@ -191,245 +318,257 @@
                               aria-label="Close"
                             ></button>
                           </div>
-                          <div class="modal-body">
-                            Are you sure you want to upload this file? This
-                            action cannot be undone
+                          <div
+                            class="modal-body text-center justify-content-center mx-auto"
+                          >
+                            <h1
+                              class="modal-title fs-3 fw-bold"
+                              id="staticBackdropLabel"
+                            >
+                              Anda yakin?
+                            </h1>
+                            Apakah anda yakin untuk update file ini? file ini
+                            belum diselesaikan
                           </div>
                           <div class="modal-footer gap-3">
-                            <a
+                            <button
                               type="button"
                               class="btn btn-outline-primary"
                               data-bs-dismiss="modal"
                             >
-                              Cancel
-                            </a>
-                            <a
-                              class="btn btn-primary"
-                              data-bs-toggle="modal"
-                              data-bs-target="#viewSuccess"
-                            >
-                              Upload
-                            </a>
+                              Batal
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                              Update
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="bg-white p-3 w-25 h-25">
+                <div class="bg-white col-12 col-lg-3 p-3 h-25 mt-5 mt-lg-0">
                   <h5 class="fs-5 fw-bold mb-2">Unggah File</h5>
                   <p class="fs-6 text-black-50">
                     Unggah data dari masing masing file berikut
                   </p>
                 </div>
               </div>
-              <div class="d-flex gap-4 d-none" id="uncomDiv">
-                <div class="bg-white p-4 w-75">
-                  <h6 class="fw-bold mb-1 fs-5">
-                    Unggah data dari masing masing file berikut
-                  </h6>
-                  <p class="text-black-50 text-light">
-                    Unggah data dari masing masing file berikut
-                  </p>
-                  <div class="d-flex gap-4 my-4 justify-content-between">
-                    <div class="col-12">
-                      <label for="exampleFormControlInput1" class="form-label"
-                        >Subject</label
-                      >
+            </div>
+            <div class="d-none" id="uncomDiv">
+              <div
+                class="bg-white col-12 col-lg-9 gap-5 justify-content-between p-3"
+              >
+                <h6 class="fw-bold mb-1 fs-5">
+                  Unggah data dari masing masing file berikut
+                </h6>
+                <p class="text-black-50 text-light">
+                  Unggah data dari masing masing file berikut
+                </p>
+                <div class="d-flex gap-4 my-4 justify-content-between">
+                  <div class="col-12">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Subject</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Data Comtrade 2024"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <div class="mb-1">
+                    Upload Image <span class="text-danger">*</span>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      id="dropZone"
+                      class="mb-3"
+                      ondragover="handleDragOver(event)"
+                      ondragleave="handleDragLeave(event)"
+                      ondrop="handleDrop(event)"
+                    >
+                      <p class="mb-0 mt-5">
+                        <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
+                        Drop here to attach or upload
+                      </p>
                       <input
-                        type="email"
-                        class="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder="Data Comtrade 2024"
+                        type="file"
+                        id="fileInput"
+                        accept="image/*"
+                        style="display: none"
                       />
                     </div>
+                    <p class="text-muted mb-0">Max size: 10 MB</p>
                   </div>
-
-                  <div class="mt-4">
-                    <div class="mb-1">
-                      Upload Image <span class="text-danger">*</span>
-                    </div>
-                    <div class="card-body">
-                      <div
-                        id="dropZone"
-                        class="mb-3"
-                        ondragover="handleDragOver(event)"
-                        ondragleave="handleDragLeave(event)"
-                        ondrop="handleDrop(event)"
-                      >
-                        <p class="mb-0 mt-5">
-                          <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
-                          Drop here to attach or upload
-                        </p>
-                        <input
-                          type="file"
-                          id="fileInput"
-                          accept="image/*"
-                          style="display: none"
-                        />
-                      </div>
-                      <p class="text-muted mb-0">Max size: 10 MB</p>
-                    </div>
-                  </div>
-                  <div class="mt-4">
-                    <hr />
-                    <div class="justify-content-end mt-4 text-end d-flex gap-4">
-                      <a
-                        href="#"
-                        class="btn btn-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop1"
-                        >Uplod Data</a
-                      >
-                    </div>
-                    <!-- Modal -->
-                    <div
-                      class="modal fade"
-                      id="staticBackdrop1"
-                      data-bs-backdrop="static"
-                      data-bs-keyboard="false"
-                      tabindex="-1"
-                      aria-labelledby="staticBackdropLabel"
-                      aria-hidden="true"
+                </div>
+                <div class="mt-4">
+                  <hr />
+                  <div class="justify-content-end mt-4 text-end d-flex gap-4">
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop1"
+                      >Uplod Data</a
                     >
-                      <div class="modal-dialog modal-dialog-centered mx-auto">
-                        <div class="modal-content text-center">
-                          <div class="modal-header te">
-                            <h1
-                              class="modal-title fs-5"
-                              id="staticBackdropLabel"
-                            >
-                              Are you sure?
-                            </h1>
-                            <button
-                              type="button"
-                              class="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                          </div>
-                          <div class="modal-body">
-                            Are you sure you want to upload this file? This
-                            action cannot be undone
-                          </div>
-                          <div class="modal-footer gap-3">
-                            <a
-                              class="btn btn-outline-primary"
-                              data-bs-dismiss="modal"
-                            >
-                              Cancel
-                            </a>
-                            <a class="btn btn-primary"> Upload </a>
-                          </div>
+                  </div>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop1"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content text-center">
+                        <div class="modal-header">
+                          <div></div>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div
+                          class="modal-body text-center justify-content-center mx-auto"
+                        >
+                          <h1
+                            class="modal-title fs-3 fw-bold"
+                            id="staticBackdropLabel"
+                          >
+                            Anda yakin?
+                          </h1>
+                          Apakah anda yakin untuk update file ini? file ini
+                          belum diselesaikan
+                        </div>
+                        <div class="modal-footer gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-outline-primary"
+                            data-bs-dismiss="modal"
+                          >
+                            Batal
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Update
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="bg-white p-3 w-25 h-25">
-                  <h5 class="fs-5 fw-bold mb-2">Upload File</h5>
-                  <p class="fs-6 text-black-50">
-                    There are three different section on this page. Product
-                    details, Product variants and Product pack sizes.
-                  </p>
+              </div>
+              <div class="bg-white col-12 col-lg-3 p-3 h-25 mt-5 mt-lg-0">
+                <h5 class="fs-5 fw-bold mb-2">Upload File</h5>
+                <p class="fs-6 text-black-50">
+                  There are three different section on this page. Product
+                  details, Product variants and Product pack sizes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- modal success uplod -->
+          <div
+            class="modal fade"
+            id="viewSuccess"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered mx-auto">
+              <div class="modal-content text-center">
+                <div
+                  class="modal-header text-center flex justify-content-between"
+                >
+                  <div></div>
+                  <div>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                </div>
+                <div class="modal-body text-center py-4">
+                  <img src="assets/sucess.png" class="mx-auto" alt="" />
+                  <h5 class="fw-bold fs-4">Uplod Sucess</h5>
                 </div>
               </div>
             </div>
-            <!-- modal success uplod -->
-            <div
-              class="modal fade"
-              id="viewSuccess"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered mx-auto">
-                <div class="modal-content text-center">
-                  <div
-                    class="modal-header text-center flex justify-content-between"
-                  >
-                    <div></div>
-                    <div>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                  </div>
-                  <div class="modal-body text-center py-4">
-                    <img src="assets/sucess.png" class="mx-auto" alt="" />
-                    <h5 class="fw-bold fs-4">Uplod Sucess</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="uplod card p-3 mt-4 d-none" id="uplodTable">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">Exim</th>
-                    <th scope="col">Tahun</th>
-                    <th scope="col">Bulan</th>
-                    <th scope="col">Versi hs</th>
-                    <th scope="col">Kode hs</th>
-                    <th scope="col">Konsumsi</th>
-                    <th scope="col">Olahan</th>
-                    <th scope="col">Asal bahan baku</th>
-                    <th scope="col">Komoditas 1</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">Impor</th>
-                    <td>2024</td>
-                    <td>03</td>
-                    <td>2022</td>
-                    <td>29362800</td>
-                    <td>K</td>
-                    <td>N</td>
-                    <td>LAINNYA</td>
-                    <td>Bahan Kimia</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Impor</th>
-                    <td>2024</td>
-                    <td>03</td>
-                    <td>2022</td>
-                    <td>29362800</td>
-                    <td>K</td>
-                    <td>N</td>
-                    <td>LAINNYA</td>
-                    <td>Bahan Kimia</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Impor</th>
-                    <td>2024</td>
-                    <td>03</td>
-                    <td>2022</td>
-                    <td>29362800</td>
-                    <td>K</td>
-                    <td>N</td>
-                    <td>LAINNYA</td>
-                    <td>Bahan Kimia</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Impor</th>
-                    <td>2024</td>
-                    <td>03</td>
-                    <td>2022</td>
-                    <td>29362800</td>
-                    <td>K</td>
-                    <td>N</td>
-                    <td>LAINNYA</td>
-                    <td>Bahan Kimia</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+          </div>
+          <div class="uplod card p-3 mt-4 d-none overflow-auto" id="uplodTable">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Exim</th>
+                  <th scope="col">Tahun</th>
+                  <th scope="col">Bulan</th>
+                  <th scope="col">Versi hs</th>
+                  <th scope="col">Kode hs</th>
+                  <th scope="col">Konsumsi</th>
+                  <th scope="col">Olahan</th>
+                  <th scope="col">Asal bahan baku</th>
+                  <th scope="col">Komoditas 1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Impor</th>
+                  <td>2024</td>
+                  <td>03</td>
+                  <td>2022</td>
+                  <td>29362800</td>
+                  <td>K</td>
+                  <td>N</td>
+                  <td>LAINNYA</td>
+                  <td>Bahan Kimia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Impor</th>
+                  <td>2024</td>
+                  <td>03</td>
+                  <td>2022</td>
+                  <td>29362800</td>
+                  <td>K</td>
+                  <td>N</td>
+                  <td>LAINNYA</td>
+                  <td>Bahan Kimia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Impor</th>
+                  <td>2024</td>
+                  <td>03</td>
+                  <td>2022</td>
+                  <td>29362800</td>
+                  <td>K</td>
+                  <td>N</td>
+                  <td>LAINNYA</td>
+                  <td>Bahan Kimia</td>
+                </tr>
+                <tr>
+                  <th scope="row">Impor</th>
+                  <td>2024</td>
+                  <td>03</td>
+                  <td>2022</td>
+                  <td>29362800</td>
+                  <td>K</td>
+                  <td>N</td>
+                  <td>LAINNYA</td>
+                  <td>Bahan Kimia</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

@@ -33,143 +33,307 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
     />
-    <div class="">
-      <div class="d-flex">
-        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
-          <div class="position-fixed">
-            <div class="d-flex align-items-center pb-4">
-              <img src="assets/logo-sidebar.png" alt="" />
-            </div>
-            <ul class="list-unstyled text">
-              <li class="nav-link">
-                <a href="artikelDashboard.html" class="d-block p-2">
-                  <i class="fa-solid fa-file-lines"></i> Artikel</a
-                >
-              </li>
-              <li class="nav-link active">
-                <a href="ebook.html" class="d-block p-2"
-                  ><i class="fa-solid fa-book"></i> E-Book</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Unggah</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="download.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Download</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Menejemen User</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Peran</a
-                >
-              </li>
-            </ul>
-            <div class="logout-submenu">
-              <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
+
+    <div class="d-block d-sm-block d-lg-flex">
+      <div
+        class="d-none d-sm-none d-lg-block col-2 bg-blue p-3 text-white sidebar-admin overflow-auto"
+      >
+        <div class="position-fixed">
+          <div class="d-flex align-items-center pb-4">
+            <img src="assets/logo-sidebar.png" alt="" />
+          </div>
+          <ul class="list-unstyled text h-50">
+            <li class="nav-link">
+              <a href="artikelDashboard.html" class="d-block p-2">
+                <i class="fa-solid fa-file-lines"></i> Artikel</a
               >
+            </li>
+            <li class="nav-link active">
+              <a href="ebook.html" class="d-block p-2"
+                ><i class="fa-solid fa-book"></i> E-Book</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="uplod.html" class="d-block p-2"
+                ><i class="fa-solid fa-upload"></i> Unggah</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="download.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Download</a
+              >
+            </li>
+
+            <li class="nav-link">
+              <a href="admin.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Menejemen User</a
+              >
+            </li>
+            <li class="nav-link mb-5">
+              <a href="roleManagement.html" class="d-block p-2"
+                ><i class="fa-solid fa-user-cog"></i> Peran</a
+              >
+            </li>
+            <div class="pt-5">
+              <li class="nav-link mt-5">
+                <a href="index.html" class="d-block p-2"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Keluar</a
+                >
+              </li>
             </div>
-          </div>
+          </ul>
         </div>
-        <div class="col-10">
-          <!-- navbar -->
-          <div
-            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
-          >
-            <img src="assets/logo.png" alt="" />
-            <div class="d-flex align-items-center gap-4">
-              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
-              <img
-                src="https://via.placeholder.com/30"
-                alt="Avatar"
-                class="rounded-circle img-fluid"
-              />
-            </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-10">
+        <!-- navbar -->
+        <nav class="navbar justify-content-between bg-white px-lg-5 px-1 w-100">
+          <img src="assets/logo.png" alt="" />
+          <div class="d-flex align-items-center gap-4">
+            <img
+              src="https://via.placeholder.com/30"
+              alt="Avatar"
+              class="rounded-circle img-fluid"
+            />
           </div>
-          <!-- content -->
-          <div class="px-5 mt-4">
-            <div class="container mt-5">
-              <h5 class="fw-bold mb-4 fs-4">E - Book</h5>
-              <div class="d-flex gap-4">
-                <div class="bg-white p-4 w-75">
-                  <h6 class="fw-bold mb-1 fs-5">Add New E - Book</h6>
-                  <p class="text-black-50 text-light">
-                    Please provide details of this product.
-                  </p>
-                  <div class="d-flex gap-4 my-4 justify-content-between">
-                    <div class="col-12 col-md-7">
-                      <label for="exampleFormControlInput1" class="form-label"
-                        >Judul Artikel</label
+          <button
+            class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="fas fa-bars py-2"></i>
+          </button>
+        </nav>
+        <!-- sidebar mobile -->
+        <div class="d-block d-sm-block d-lg-none">
+          <nav class="navbar position-absolute">
+            <div class="container-fluid">
+              <div
+                class="offcanvas offcanvas-end bg-primary"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-body text-white sidebar-admin">
+                  <div class="d-flex align-items-center pb-4">
+                    <img src="assets/logo-sidebar.png" alt="" />
+                  </div>
+                  <ul class="list-unstyled text">
+                    <li class="nav-link">
+                      <a href="artikelDashboard.html" class="d-block p-2">
+                        <i class="fa-solid fa-file-lines"></i> Artikel</a
                       >
+                    </li>
+                    <li class="nav-link active">
+                      <a href="ebook.html" class="d-block p-2"
+                        ><i class="fa-solid fa-book"></i> E-Book</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="uplod.html" class="d-block p-2"
+                        ><i class="fa-solid fa-upload"></i> Unggah</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="download.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Download</a
+                      >
+                    </li>
+
+                    <li class="nav-link">
+                      <a href="admin.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Menejemen User</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="roleManagement.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user-cog"></i> Peran</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="index.html" class="d-block p-2"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Keluar</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- content -->
+        <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
+          <div class="mt-5">
+            <h5 class="fw-bold mb-4 fs-4">E - Book</h5>
+            <div class="d-block d-sm-block d-lg-flex gap-4">
+              <div
+                class="bg-white col-12 col-lg-9 gap-5 justify-content-between p-3"
+              >
+                <h6 class="fw-bold mb-1 fs-5">E - Book Baru</h6>
+                <p class="text-black-50 text-light">
+                  Please provide details of this product.
+                </p>
+                <div
+                  class="d-block d-md-flex gap-4 my-4 justify-content-between"
+                >
+                  <div class="col-12 col-md-7">
+                    <label for="exampleFormControlInput1" class="form-label"
+                      >Judul E - Book</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="Ekspor Indonesia Terus Melanjutkan Kinerja Positif"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <label for="dropdownTipe"> Tipe E - Book </label>
+                    <select
+                      class="form-select form-select-md"
+                      aria-label=".form-select-sm example"
+                      id="dropdownTipe"
+                    >
+                      <option selected>E - Book</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="card w-100">
+                  <div class="card-header">Deskripsi E - Book</div>
+                  <div class="card-body">
+                    <div
+                      class="mb-3 d-block d-lg-flex justify-content-start gap-2"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                        onclick="formatText('bold')"
+                      >
+                        <strong>B</strong>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                        onclick="formatText('italic')"
+                      >
+                        <em>I</em>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                        onclick="formatText('strike')"
+                      >
+                        <i class="fa-solid fa-strikethrough"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                        onclick="formatText('underline')"
+                      >
+                        <i class="fa-solid fa-underline"></i>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-align-left"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-align-right"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-align-justify"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-list-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                        onclick="addParagraphNumbers()"
+                      >
+                        <i class="fa-solid fa-list"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-list-check"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-link text-black-50 text-decoration-none"
+                      >
+                        <i class="fa-solid fa-image"></i>
+                      </button>
+                    </div>
+                    <div
+                      contenteditable="true"
+                      id="editor"
+                      class="border p-3"
+                      style="min-height: 200px"
+                    >
+                      Describe your product..
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <div class="mb-1">
+                    Upload Thumbnail <span class="text-danger">*</span>
+                  </div>
+                  <div class="card-body">
+                    <div
+                      id="dropZone"
+                      class="mb-3"
+                      ondragover="handleDragOver(event)"
+                      ondragleave="handleDragLeave(event)"
+                      ondrop="handleDrop(event)"
+                    >
+                      <p class="mb-0 mt-5">
+                        <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
+                        Drop here to attach or upload
+                      </p>
                       <input
-                        type="email"
-                        class="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder="Ekspor Indonesia Terus Melanjutkan Kinerja Positif"
+                        type="file"
+                        id="fileInput"
+                        accept="image/*"
+                        style="display: none"
                       />
                     </div>
-                    <div class="col-12 col-md-4">
-                      <label for="dropdownTipe"> Tipe Arikel </label>
-                      <select
-                        class="form-select form-select-md"
-                        aria-label=".form-select-sm example"
-                        id="dropdownTipe"
-                      >
-                        <option selected>Artikel</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
+                    <p class="text-muted mb-0">Max size: 10 MB</p>
                   </div>
+                </div>
+                <div class="mt-4">
+                  <hr />
+                  <div class="justify-content-end mt-4 text-end">
+                    <a href="#" class="btn btn-primary">Create E - Book</a>
+                  </div>
+                </div>
+              </div>
 
-                  <div class="mt-4">
-                    <div class="mb-1">
-                      Upload Image <span class="text-danger">*</span>
-                    </div>
-                    <div class="card-body">
-                      <div
-                        id="dropZone"
-                        class="mb-3"
-                        ondragover="handleDragOver(event)"
-                        ondragleave="handleDragLeave(event)"
-                        ondrop="handleDrop(event)"
-                      >
-                        <p class="mb-0 mt-5">
-                          <i class="fas fa-cloud-upload-alt fa-3x"></i><br />
-                          Drop here to attach or upload
-                        </p>
-                        <input
-                          type="file"
-                          id="fileInput"
-                          accept="image/*"
-                          style="display: none"
-                        />
-                      </div>
-                      <p class="text-muted mb-0">Max size: 10 MB</p>
-                    </div>
-                  </div>
-                  <div class="mt-4">
-                    <hr />
-                    <div class="justify-content-end mt-4 text-end">
-                      <a href="#" class="btn btn-primary">Update</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="bg-white p-3 w-25 h-25">
-                  <h5 class="fs-5 fw-bold mb-2">Buat baru E-bookl</h5>
-                  <p class="fs-6 text-black-50">
-                    Masukan data file e-book yang ingin di unggah
-                  </p>
-                </div>
+              <div class="bg-white col-12 col-lg-3 p-3 h-25 mt-5 mt-lg-0">
+                <h5 class="fs-5 fw-bold mb-2">Buat baru E - Book</h5>
+                <p class="fs-6 text-black-50">
+                  Masukan data E - Book berikut dengan judul , tipe artikel ,
+                  deskripsi artikel , dan gambar pada artikel
+                </p>
               </div>
             </div>
           </div>

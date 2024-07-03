@@ -22,40 +22,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg shadow-sm">
-      <div class="container-fluid px-5">
-        <a class="navbar-brand d-none d-md-block" href="index.html">
-          <img src="assets/logo.png" alt="" />
-        </a>
-        <a class="navbar-brand d-block d-md-none" href="index.html">
-          <img src="assets/logoMobile.png" alt="" />
-        </a>
-        <div class="ms-auto ms-md-0 d-block d-md-none me-2">
-          <a
-            class="text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-3"
-            href="#"
-          >
-            Login
-          </a>
-        </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container mx-auto">
+        <a class="navbar-brand" href="index.html"
+          ><img src="assets/logo.png" alt=""
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarText"
+        <button
+          class="navbar-toggler btn btn-dark d-block d-sm-block d-md-none d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
         >
-          <ul class="navbar-nav mb-2 mb-lg-0 text-center mt-3 mt-md-0">
+          <i class="fas fa-home py-2"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav mx-auto my-2 my-lg-0"
+            style="--bs-scroll-height: 100px"
+          >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artikel">Artikel</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -85,33 +86,105 @@
                 </li>
               </ul>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="#artikel">Artikel</a>
+              <a class="nav-link" href="#statistik">Statistik</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#statistik">Data & Informasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ebook">E-Book</a>
+              <a class="nav-link" href="E-Book">E-Book</a>
             </li>
           </ul>
-        </div>
-        <div class="mx-auto ms-md-0 d-none d-md-block">
-          <a
-            class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-darkblue px-4 w-100"
-            href="#"
-          >
-            Login
-          </a>
+          <form class="d-flex" role="search">
+            <button
+              type="button"
+              class="navbar-text text-login fw-bold text-decoration-none text-center btn btn-outline-primary px-4 w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Login
+            </button>
+          </form>
         </div>
       </div>
     </nav>
     <!-- end navbar -->
-
+    <!-- Modal Login -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered mx-auto">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">
+              Masuk
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Kkp@mail.com"
+                  required
+                  autocomplete="none"
+                />
+              </div>
+              <div class="form-group my-3 position-relative">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="******"
+                  required
+                  autocomplete="none"
+                />
+                <span
+                  id="togglePassword"
+                  class="fa fa-fw fa-eye field-icon position-absolute"
+                  style="
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                  "
+                ></span>
+              </div>
+              <div id="errorMessage" class="text-danger fw-light fs-6"></div>
+              <button
+                type="submit"
+                class="btn btn-darkblue text-white w-100 mt-3 py-2"
+              >
+                Sign in
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>
+              Protected by reCAPTCHA and subject to the Market Intelligence
+              <a href="#"> Privacy Policy</a> and
+              <a href="#">Terms of Service.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Statistik hero -->
     <div class="d-flex">
       <!-- left content -->
-      <div class="sidebar-dashboard sticky-top">
+      <div class="sidebar-dashboard sticky-top d-sm-none d-none d-md-block">
         <ul class="text-white list-unstyled">
           <li class="active-sidebar">
             <a href="#" class="d-block mb-3 active">Dashboard</a>
@@ -127,16 +200,53 @@
           </li>
         </ul>
       </div>
+      <div class="d-sm-block d-block d-md-none">
+        <nav class="navbar position-absolute">
+          <div class="container-fluid">
+            <div
+              class="offcanvas offcanvas-end bg-primary"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-body text-white sidebar-dashboard">
+                <div class="">
+                  <ul class="text-white list-unstyled">
+                    <li class="active-sidebar">
+                      <a href="#" class="d-block mb-3 active">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="proyeksi.html" class="d-block mb-3">Proyeksi</a>
+                    </li>
+                    <li>
+                      <a href="prefensi.html" class="d-block mb-3"
+                        >Preferensi</a
+                      >
+                    </li>
+                    <li>
+                      <a href="market.html" class="d-block mb-3"
+                        >Market Analysis</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
 
       <!-- right content -->
-      <div class="flex-grow-1 px-5 py-3 mb-5">
+      <div class="flex-grow-1 px-5 w-50 py-3 mb-5">
         <!-- input hero -->
-        <div class="d-flex align-items-end gap-4 justify-content-between">
+        <div
+          class="d-lg-flex d-block align-items-center gap-4 justify-content-between"
+        >
           <h3>
             Komoditas <span class="text-warning">Udang</span> Tahun 2023 Pasar
             US
           </h3>
-          <div class="row w-50 align-items-center justify-content-between">
+          <div class="row w-100 align-items-start justify-content-between">
             <div class="col-4">
               <label for="importir">Importir</label>
               <select
@@ -179,8 +289,8 @@
           </div>
         </div>
         <!-- end input hero -->
-        <div class="row row-cols-3 justify-content-between mt-4 gy-4">
-          <div class="statistikContent p-3" style="width: 32.5%">
+        <div class="d-lg-flex d-block gap-4 justify-content-between mt-4 gy-4">
+          <div class="statistikContent p-3 mt-3 mt-lg-0 w-100">
             <div class="vertikal-border">
               <div class="ps-2">
                 <div class="d-flex justify-content-between">
@@ -192,7 +302,7 @@
               </div>
             </div>
           </div>
-          <div class="statistikContent p-3" style="width: 32.5%">
+          <div class="statistikContent p-3 mt-3 mt-lg-0 w-100">
             <div class="vertikal-border">
               <div class="ps-2">
                 <div class="d-flex justify-content-between">
@@ -204,7 +314,7 @@
               </div>
             </div>
           </div>
-          <div class="statistikContent p-3" style="width: 32.5%">
+          <div class="statistikContent p-3 mt-3 mt-lg-0 w-100">
             <div class="vertikal-border">
               <div class="ps-2">
                 <div class="d-flex justify-content-between">
@@ -218,10 +328,10 @@
           </div>
         </div>
 
-        <div class="mainContent container-fluid mt-5">
+        <div class="mainContent mt-5">
           <div class="card p-3">
-            <img src="assets/heatmap.png" class="my-3 w-75 mx-auto" alt="" />
-            <div class="grid mt-5 mb-3 gy-3">
+            <img src="assets/heatmap.png" class="my-3 w-50 mx-auto" alt="" />
+            <div class="grid mt-5 mb-3 gy-3 w-75">
               <p class="fs-6">
                 <span class="fw-bold text-blue">Sumber :</span> UN Comtrade
               </p>
@@ -232,24 +342,36 @@
             </div>
           </div>
           <div class="row row-cols-2 mt-5">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-sm-12 col-lg-6">
               <div class="card p-3">
-                <img src="assets/grafik-udang.png" width="95%" alt="" />
+                <div class="card-body">
+                  <img src="assets/grafik-udang.png" width="50%" alt="" />
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-sm-12 col-lg-6 mt-5 mt-lg-0">
               <div class="card p-3">
-                <img src="assets/prefensi-udang.png" alt="" />
+                <div class="card-body">
+                  <img src="assets/prefensi-udang.png" width="53%" alt="" />
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 mt-5">
+            <div class="col-12 col-sm-12 col-lg-6 mt-5">
               <div class="card p-3">
-                <img src="assets/kebutuhan-udang.png" alt="" />
+                <div class="card-body">
+                  <img src="assets/kebutuhan-udang.png" width="50%" alt="" />
+                </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 mt-5">
+            <div class="col-12 col-sm-12 col-lg-6 mt-5">
               <div class="card p-3">
-                <img src="assets/kebutuhan-bulanan-udang.png" alt="" />
+                <div class="card-body">
+                  <img
+                    src="assets/kebutuhan-bulanan-udang.png"
+                    width="50%"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>

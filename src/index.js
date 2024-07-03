@@ -97,6 +97,63 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const bpsToggle = document.getElementById("bps");
+  const uncomToggle = document.getElementById("uncom");
+  const bpsDiv = document.getElementById("bpsDiv");
+  const uncomDiv = document.getElementById("uncomDiv");
+
+  uncomToggle.addEventListener("click", () => {
+    if (!uncomToggle.classList.contains("active")) {
+      bpsToggle.classList.remove("active");
+      uncomToggle.classList.add("active");
+      bpsDiv.classList.add("d-none");
+      uncomDiv.classList.remove("d-none");
+    }
+  });
+
+  bpsToggle.addEventListener("click", () => {
+    if (!bpsToggle.classList.contains("active")) {
+      bpsToggle.classList.add("active");
+      uncomToggle.classList.remove("active");
+      bpsDiv.classList.remove("d-none");
+      uncomDiv.classList.add("d-none");
+    }
+  });
+
+  const uplodButton = document.getElementById("uplodBtn");
+  const uplodTable = document.getElementById("uplodTable");
+
+  uplodButton.addEventListener("click", () => {
+    uplodTable.classList.toggle("d-none");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const adminCmsToggle = document.getElementById("adminCms");
+  const adminApiToggle = document.getElementById("adminApi");
+  const cmsDiv = document.getElementById("cmsTable");
+  const apiDiv = document.getElementById("apiTable");
+
+  adminApiToggle.addEventListener("click", () => {
+    if (!adminApiToggle.classList.contains("active")) {
+      adminCmsToggle.classList.remove("active");
+      adminApiToggle.classList.add("active");
+      cmsDiv.classList.add("d-none");
+      apiDiv.classList.remove("d-none");
+    }
+  });
+
+  adminCmsToggle.addEventListener("click", () => {
+    if (!adminCmsToggle.classList.contains("active")) {
+      adminCmsToggle.classList.add("active");
+      adminApiToggle.classList.remove("active");
+      cmsDiv.classList.remove("d-none");
+      apiDiv.classList.add("d-none");
+    }
+  });
+});
+
 const dropZone = document.getElementById("dropZone");
 
 dropZone.addEventListener("click", function () {
@@ -145,55 +202,6 @@ function handleFiles(files) {
 }
 
 // uplod file div
-
-const bpsToggle = document.getElementById("bps");
-const uncomToggle = document.getElementById("uncom");
-const bpsDiv = document.getElementById("bpsDiv");
-const uncomDiv = document.getElementById("uncomDiv");
-
-uncomToggle.addEventListener("click", () => {
-  if (bpsToggle.classList.contains("active")) {
-    bpsToggle.classList.remove("active");
-    uncomToggle.classList.add("active");
-    bpsDiv.classList.add("d-none");
-    uncomDiv.classList.remove("d-none");
-    bpsToggle.addEventListener("click", () => {
-      bpsToggle.classList.add("active");
-      uncomToggle.classList.remove("active");
-      bpsDiv.classList.remove("d-none");
-      uncomDiv.classList.add("d-none");
-    });
-  }
-});
-
-const uplodButton = document.getElementById("uplodBtn");
-const uplodTable = document.getElementById("uplodTable");
-
-uplodButton.addEventListener("click", () => {
-  if (uplodTable.classList.contains("d-none")) {
-    uplodTable.classList.toggle("d-none");
-  }
-});
-
-const adminCmsToggle = document.getElementById("adminCms");
-const adminApiToggle = document.getElementById("adminApi");
-const cmsDiv = document.getElementById("cmsDiv");
-const apiDiv = document.getElementById("apiDiv");
-
-adminApiToggle.addEventListener("click", () => {
-  if (adminCmsToggle.classList.contains("active")) {
-    adminCmsToggle.classList.remove("active");
-    adminApiToggle.classList.add("active");
-    cmsDiv.classList.add("d-none");
-    apiDiv.classList.remove("d-none");
-    adminCmsToggle.addEventListener("click", () => {
-      adminCmsToggle.classList.add("active");
-      adminApiToggle.classList.remove("active");
-      cmsDiv.classList.remove("d-none");
-      apiDiv.classList.add("d-none");
-    });
-  }
-});
 
 // active link in different pages
 const navLinks = document.querySelectorAll(".nav-link");

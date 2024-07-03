@@ -64,9 +64,13 @@ button.slick-arrow {
 }
 
 .navbar ul li a {
-  font-size: 20px !important;
+  font-size: 16px !important;
   font-weight: bold !important;
   color: #111 !important;
+}
+
+.navbar-brand img {
+  width: 100% !important;
 }
 
 .nav-link {
@@ -124,7 +128,7 @@ button.slick-arrow {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 105% !important;
+    width: 100% !important;
     height: 670px !important;
     margin-top: -214px !important;
   }
@@ -172,10 +176,6 @@ button.slick-arrow {
   }
 
   /* komoditas */
-
-  .komoditas {
-    margin-top: -240px !important;
-  }
 
   .komoditas h5 {
     font-size: var(--text-h1);
@@ -254,10 +254,6 @@ button.slick-arrow {
   .artikel p {
     font-size: 15px !important;
     color: #2072ac !important;
-  }
-
-  .artikel .card {
-    height: 100% !important;
   }
 
   h5.card-title {
@@ -440,20 +436,277 @@ button.slick-arrow {
   }
 }
 
+/* tablet */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .hero {
+    background-image: url("/src/assets/hero.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 98vw !important;
+    height: 100% !important;
+    margin-top: 12px !important;
+  }
+
+  .hero-text {
+    line-height: 72px !important;
+    margin-bottom: 32px !important;
+    font-size: 54px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .hero span {
+    color: var(--footer);
+  }
+  .hero {
+    padding-top: 80px !important;
+  }
+
+  .komoditas h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
+
+  .komoditas .komoditasTitle {
+    position: relative; /* Menentukan posisi relatif untuk menempatkan overlay */
+  }
+
+  .komoditas .komoditasTitle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-radius: 18px !important;
+    left: 0;
+    width: 80.5%;
+    height: 100%;
+    margin-left: 7px !important;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.5
+    ); /* Menggunakan rgba untuk overlay hitam dengan opacity */
+    opacity: 0; /* Awalnya opacity 0 */
+    transition: opacity 0.5s ease-in-out; /* Transisi untuk efek fadeIn */
+  }
+
+  .komoditas .komoditasTitle:hover::before {
+    opacity: 1; /* Opacity menjadi 1 saat dihover */
+  }
+
+  .komoditas img {
+    width: 95% !important;
+    height: 300px !important;
+    padding-left: 10px !important;
+  }
+
+  .komoditas .komoditasTitle .komoditasTranslate {
+    transform: translateY(90%);
+
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .komoditasTranslate {
+    width: 100% !important;
+    padding: 0 44px !important;
+  }
+
+  .komoditas .komoditasTitle:hover .komoditasTranslate {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+
+  .komoditas .komoditasTitle h5 {
+    font-size: var(--text-h2) !important;
+    color: #fff !important;
+  }
+
+  .komoditas .komoditasTitle a {
+    margin-top: 36px !important;
+    background-color: #288ed7 !important;
+    padding: 10px 20px !important;
+    margin-right: 44px !important;
+  }
+
+  .komoditas .komoditasTitle p {
+    font-size: var(--text-h3) !important;
+    color: #fff;
+  }
+
+  /* artikel */
+  .artikel h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
+
+  .artikel p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+  }
+
+  .artikel .card {
+    height: 100% !important;
+  }
+
+  h5.card-title {
+    font-size: 20px !important;
+  }
+
+  .card-body p {
+    font-size: 15px !important;
+    color: #6c757d !important;
+  }
+
+  .linkHover {
+    visibility: hidden;
+  }
+
+  .artikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
+
+  .heroArtikel .card:hover {
+    border-radius: 16px;
+    outline: 3px solid #288ed7;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    transition: 2ms ease;
+  }
+
+  .card:hover .linkHover {
+    visibility: visible;
+  }
+
+  /* data n informasi */
+  .data h5 {
+    font-size: 35px !important;
+    font-weight: bold !important;
+  }
+
+  .data p {
+    font-size: 15px !important;
+    color: #2072ac !important;
+  }
+
+  table thead.bg-green {
+    background-color: #e7f4a4 !important;
+  }
+
+  .card-data {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    padding: 24px !important;
+  }
+  /* ebook */
+  .ebook .bg-ebook {
+    background-image: url("/src/assets/ebook.png");
+    width: 23%;
+    /* height: 500px !important; */
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat;
+    height: 344px !important;
+    border-radius: 16px !important;
+  }
+
+  .ebook h5 {
+    font-size: var(--text-h1);
+    font-weight: bold;
+  }
+
+  .ebook p {
+    font-size: var(--text-p);
+    color: #2072ac;
+  }
+
+  .ebook .ebookTranslate {
+    visibility: hidden;
+  }
+
+  .ebook .ebookContent:hover {
+    border-radius: 20px !important;
+    transition: 5ms ease-in-out;
+    box-shadow: -4px 9px 25px -6px rgba(0, 0, 0, 0.1);
+    background-color: #111;
+    opacity: 1;
+  }
+
+  .ebookContent:hover .ebookTranslate {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  /* footer */
+  footer {
+    background-color: var(--footer);
+    color: #fff !important;
+  }
+
+  footer p {
+    font-size: 15px !important;
+  }
+
+  /* ! Artikel css */
+  /* hero css */
+  .heroArtikel {
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 99vw !important;
+    height: 100% !important;
+    margin-top: 24px !important;
+    margin-bottom: 100px !important ;
+  }
+
+  .heroArtikel h1 {
+    font-size: var(--text-heading) !important;
+  }
+
+  .heroArtikel p {
+    font-size: var(--text-h3) !important;
+    line-height: 30px !important;
+  }
+
+  .artikelArtikel h3 {
+    font-size: var(--text-h1) !important;
+    line-height: 30px !important;
+    font-weight: bold !important;
+  }
+
+  /* ! artikel */
+  .card {
+    border-radius: 10px;
+    border: 1px solid #c8ccd0;
+    background: #fff;
+  }
+  .artikelCardText h5 {
+    font-size: var(--text-h1);
+  }
+
+  .artikelCardText p {
+    font-size: var(--text-h3) !important;
+    color: #103956;
+  }
+}
 /* dekstop */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
   /* navbar style */
 
   .navbar ul li {
-    padding: 0 24px !important;
+    padding: 0 14px !important;
   }
   .px-25 {
-    padding: 0 125px !important;
+    padding: 0 25px !important;
   }
 
   /* hero */
   .hero {
-    background-image: url("/src/assets/hero.png") !important;
+    background-image: url("/src/assets/heroTitle.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -737,10 +990,12 @@ button.slick-arrow {
   padding: 24px;
   background-color: var(--btn-primary);
   height: 100vh;
+  margin-left: 0 !important;
+  color: #fff !important;
 }
 
 .sidebar-dashboard ul li a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   font-size: var(--text-h4);
   padding: 10px;
@@ -796,12 +1051,14 @@ button.slick-arrow {
 }
 
 .sidebar-admin {
+  min-width: 230px !important;
   min-height: 100vh !important;
   position: relative;
+  background-color: var(--btn-primary) !important;
 }
 
 .sidebar-admin ul li a {
-  color: #fff;
+  color: #fff !important;
   text-decoration: none;
   font-size: 16px;
   gap: 12px;
@@ -822,9 +1079,9 @@ button.slick-arrow {
 
 .sidebar-admin ul li.active {
   background-color: #5059c8 !important;
-  padding: 10px !important;
+
   border-radius: 10px !important;
-  min-width: 200px !important;
+  min-width: 10% !important;
 }
 
 .sidebar-admin .logout-submenu {

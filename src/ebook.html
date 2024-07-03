@@ -33,15 +33,17 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
     />
+
     <div class="">
-      <div class="d-flex">
-        <!-- sidebar -->
-        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
+      <div class="d-block d-sm-block d-lg-flex">
+        <div
+          class="d-none d-sm-none d-lg-block col-2 bg-blue p-3 text-white sidebar-admin overflow-auto"
+        >
           <div class="position-fixed">
             <div class="d-flex align-items-center pb-4">
               <img src="assets/logo-sidebar.png" alt="" />
             </div>
-            <ul class="list-unstyled text">
+            <ul class="list-unstyled text h-50">
               <li class="nav-link">
                 <a href="artikelDashboard.html" class="d-block p-2">
                   <i class="fa-solid fa-file-lines"></i> Artikel</a
@@ -62,302 +64,380 @@
                   ><i class="fa-solid fa-user"></i> Download</a
                 >
               </li>
+
               <li class="nav-link">
                 <a href="admin.html" class="d-block p-2"
                   ><i class="fa-solid fa-user"></i> Menejemen User</a
                 >
               </li>
-              <li class="nav-link">
+              <li class="nav-link mb-5">
                 <a href="roleManagement.html" class="d-block p-2"
                   ><i class="fa-solid fa-user-cog"></i> Peran</a
                 >
               </li>
+              <div class="pt-5">
+                <li class="nav-link mt-5">
+                  <a href="index.html" class="d-block p-2"
+                    ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Keluar</a
+                  >
+                </li>
+              </div>
             </ul>
-            <div class="logout-submenu">
-              <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
-              >
-            </div>
           </div>
         </div>
-        <div class="col-10">
+        <div class="col-12 col-sm-12 col-lg-10">
           <!-- navbar -->
-          <div
-            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
+          <nav
+            class="navbar justify-content-between bg-white px-lg-5 px-1 w-100"
           >
             <img src="assets/logo.png" alt="" />
             <div class="d-flex align-items-center gap-4">
-              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
               <img
                 src="https://via.placeholder.com/30"
                 alt="Avatar"
                 class="rounded-circle img-fluid"
               />
             </div>
+            <button
+              class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <i class="fas fa-bars py-2"></i>
+            </button>
+          </nav>
+          <!-- sidebar mobile -->
+          <div class="d-sm-block d-block d-lg-none">
+            <nav class="navbar position-absolute">
+              <div class="container-fluid">
+                <div
+                  class="offcanvas offcanvas-end bg-primary"
+                  tabindex="-1"
+                  id="offcanvasNavbar"
+                  aria-labelledby="offcanvasNavbarLabel"
+                >
+                  <div class="offcanvas-body text-white sidebar-admin">
+                    <div class="d-flex align-items-center pb-4">
+                      <img src="assets/logo-sidebar.png" alt="" />
+                    </div>
+                    <ul class="list-unstyled text">
+                      <li class="nav-link">
+                        <a href="artikelDashboard.html" class="d-block p-2">
+                          <i class="fa-solid fa-file-lines"></i> Artikel</a
+                        >
+                      </li>
+                      <li class="nav-link active">
+                        <a href="ebook.html" class="d-block p-2"
+                          ><i class="fa-solid fa-book"></i> E-Book</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="uplod.html" class="d-block p-2"
+                          ><i class="fa-solid fa-upload"></i> Unggah</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="download.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user"></i> Download</a
+                        >
+                      </li>
+
+                      <li class="nav-link">
+                        <a href="admin.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user"></i> Menejemen User</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="roleManagement.html" class="d-block p-2"
+                          ><i class="fa-solid fa-user-cog"></i> Peran</a
+                        >
+                      </li>
+                      <li class="nav-link">
+                        <a href="index.html" class="d-block p-2"
+                          ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                          Keluar</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
           </div>
           <!-- content -->
-          <div class="px-5 mt-4">
-            <h5 class="fw-bold fs-4">E-Book</h5>
-            <div class="justify-content-end text-end">
+          <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
+            <div class="d-flex align-items-center justify-content-between">
+              <h5 class="fw-bold fs-4">E-Book</h5>
               <a
                 href="addEbook.html"
                 class="rounded-1 px-4 btn btn-outline-primary"
                 >Add</a
               >
             </div>
-            <table
-              id="example"
-              class="table table-striped table-custom bg-white rounded-3"
-            >
-              <thead>
-                <tr class="text-secondary">
-                  <th>No</th>
-                  <th>Judul E-Book</th>
-                  <th>Notes</th>
-                  <th>Status</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Laporan bulanan 2024</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td class="fw-bold text-success">Publish</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#viewModal"
-                            href="#"
-                            >View</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"
-                            href="#"
-                            >Delete</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Edit</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Unpublish</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <!-- modal -->
-                <div
-                  class="modal fade"
-                  id="staticBackdrop"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabindex="-1"
-                  aria-labelledby="staticBackdropLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered mx-auto">
-                    <div class="modal-content text-center">
-                      <div class="modal-header">
-                        <div></div>
-                        <button
+            <div class="overflow-auto">
+              <table
+                id="example"
+                class="table table-striped table-custom bg-white rounded-3"
+              >
+                <thead>
+                  <tr class="text-secondary">
+                    <th>No</th>
+                    <th>Judul E-Book</th>
+                    <th>Notes</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Laporan bulanan 2024</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td class="fw-bold text-success">Publish</td>
+                    <td>
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <a
                           type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div
-                        class="modal-body text-center justify-content-center mx-auto"
-                      >
-                        <h1
-                          class="modal-title fs-3 fw-bold"
-                          id="staticBackdropLabel"
+                          class="text-secondary"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
                         >
-                          Anda yakin?
-                        </h1>
-                        Apakah anda yakin untuk menghapus file ini? file ini
-                        belum diselesaikan
+                          <i class="fas fa-ellipsis"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#viewModal"
+                              href="#"
+                              >View</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop"
+                              href="#"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Unpublish</a
+                            >
+                          </li>
+                        </ul>
                       </div>
-                      <div class="modal-footer gap-3">
-                        <button
-                          type="button"
-                          class="btn btn-outline-danger"
-                          data-bs-dismiss="modal"
-                        >
-                          Close
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                          Delete
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- modal view -->
-                <div
-                  class="modal fade"
-                  id="viewModal"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabindex="-1"
-                  aria-labelledby="viewModal"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered mx-auto">
-                    <div class="modal-content">
-                      <div class="modal-header justify-content-between d-flex">
-                        <div></div>
-                        <div>
+                    </td>
+                  </tr>
+                  <!-- modal -->
+                  <div
+                    class="modal fade"
+                    id="staticBackdrop"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="staticBackdropLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content text-center">
+                        <div class="modal-header">
+                          <div></div>
                           <button
                             type="button"
-                            class="btn-close me-auto"
+                            class="btn-close"
                             data-bs-dismiss="modal"
                             aria-label="Close"
                           ></button>
                         </div>
-                      </div>
-                      <div class="modal-body mx-auto">
-                        <img src="assets/EbookView.png" height="600px" alt="" />
-                      </div>
-                      <div class="modal-footer gap-3">
                         <div
-                          class="text-center justify-content-center mx-auto d-flex align-items-center gap-4"
+                          class="modal-body text-center justify-content-center mx-auto"
                         >
-                          <a href="#">
-                            <i class="fa-solid fa-arrow-left"></i
-                          ></a>
-                          <div class="p-1">1 / 48</div>
-                          <a href="#"
-                            ><i class="fa-solid fa-arrow-right"></i
-                          ></a>
+                          <h1
+                            class="modal-title fs-3 fw-bold"
+                            id="staticBackdropLabel"
+                          >
+                            Anda yakin?
+                          </h1>
+                          Apakah anda yakin untuk menghapus file ini? file ini
+                          belum diselesaikan
+                        </div>
+                        <div class="modal-footer gap-3">
+                          <button
+                            type="button"
+                            class="btn btn-outline-danger"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-danger">
+                            Delete
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <tr>
-                  <td>2</td>
-                  <td>Laporan bulanan 2024</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td class="fw-bold text-danger">Unpublish</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#viewModal"
-                            href="#"
-                            >View</a
+                  <!-- modal view -->
+                  <div
+                    class="modal fade"
+                    id="viewModal"
+                    data-bs-backdrop="static"
+                    data-bs-keyboard="false"
+                    tabindex="-1"
+                    aria-labelledby="viewModal"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div class="modal-content">
+                        <div
+                          class="modal-header justify-content-between d-flex"
+                        >
+                          <div></div>
+                          <div>
+                            <button
+                              type="button"
+                              class="btn-close me-auto"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                        </div>
+                        <div class="modal-body mx-auto">
+                          <img
+                            src="assets/EbookView.png"
+                            height="600px"
+                            alt=""
+                          />
+                        </div>
+                        <div class="modal-footer gap-3">
+                          <div
+                            class="text-center justify-content-center mx-auto d-flex align-items-center gap-4"
                           >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"
-                            href="#"
-                            >Delete</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Edit</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Publish</a
-                          >
-                        </li>
-                      </ul>
+                            <a href="#">
+                              <i class="fa-solid fa-arrow-left"></i
+                            ></a>
+                            <div class="p-1">1 / 48</div>
+                            <a href="#"
+                              ><i class="fa-solid fa-arrow-right"></i
+                            ></a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Laporan bulanan 2024</td>
-                  <td>Lorem ipsum dolor sit amet.</td>
-                  <td class="fw-bold text-danger">Unpublish</td>
-                  <td>
-                    <!-- Example single danger button -->
-                    <div class="btn-group">
-                      <a
-                        type="button"
-                        class="text-secondary"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        <i class="fas fa-ellipsis"></i>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#viewModal"
-                            href="#"
-                            >View</a
-                          >
-                        </li>
-                        <li>
-                          <a
-                            class="dropdown-item"
-                            data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"
-                            href="#"
-                            >Delete</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Edit</a
-                          >
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="editEbook.html"
-                            >Publish</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                  <tr>
+                    <td>2</td>
+                    <td>Laporan bulanan 2024</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td class="fw-bold text-danger">Unpublish</td>
+                    <td>
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <a
+                          type="button"
+                          class="text-secondary"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="fas fa-ellipsis"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#viewModal"
+                              href="#"
+                              >View</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop"
+                              href="#"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Publish</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Laporan bulanan 2024</td>
+                    <td>Lorem ipsum dolor sit amet.</td>
+                    <td class="fw-bold text-danger">Unpublish</td>
+                    <td>
+                      <!-- Example single danger button -->
+                      <div class="btn-group">
+                        <a
+                          type="button"
+                          class="text-secondary"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="fas fa-ellipsis"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#viewModal"
+                              href="#"
+                              >View</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              class="dropdown-item"
+                              data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop"
+                              href="#"
+                              >Delete</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Edit</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="editEbook.html"
+                              >Publish</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

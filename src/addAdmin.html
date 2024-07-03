@@ -33,225 +33,258 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css"
     />
-    <div class="">
-      <div class="d-flex">
-        <div class="col-2 bg-blue p-3 text-white sidebar-admin">
-          <div class="position-fixed">
-            <div class="d-flex align-items-center pb-4">
-              <img src="assets/logo-sidebar.png" alt="" />
-            </div>
-            <ul class="list-unstyled text">
-              <li class="nav-link">
-                <a href="artikelDashboard.html" class="d-block p-2">
-                  <i class="fa-solid fa-file-lines"></i> Artikel</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="ebook.html" class="d-block p-2"
-                  ><i class="fa-solid fa-book"></i> E-Book</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="uplod.html" class="d-block p-2"
-                  ><i class="fa-solid fa-upload"></i> Unggah</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="download.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Download</a
-                >
-              </li>
-              <li class="nav-link active">
-                <a href="admin.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user"></i> Menejemen User</a
-                >
-              </li>
-              <li class="nav-link">
-                <a href="roleManagement.html" class="d-block p-2"
-                  ><i class="fa-solid fa-user-cog"></i> Peran</a
-                >
-              </li>
-            </ul>
-            <div class="logout-submenu">
-              <a href="index.html" class="d-block p-2"
-                ><i class="fa-solid fa-arrow-right-from-bracket"></i> Keluar</a
+
+    <div class="d-block d-sm-block d-lg-flex">
+      <div
+        class="d-none d-sm-none d-lg-block col-2 bg-blue p-3 text-white sidebar-admin overflow-auto"
+      >
+        <div class="position-fixed">
+          <div class="d-flex align-items-center pb-4">
+            <img src="assets/logo-sidebar.png" alt="" />
+          </div>
+          <ul class="list-unstyled text h-50">
+            <li class="nav-link">
+              <a href="artikelDashboard.html" class="d-block p-2">
+                <i class="fa-solid fa-file-lines"></i> Artikel</a
               >
+            </li>
+            <li class="nav-link">
+              <a href="ebook.html" class="d-block p-2"
+                ><i class="fa-solid fa-book"></i> E-Book</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="uplod.html" class="d-block p-2"
+                ><i class="fa-solid fa-upload"></i> Unggah</a
+              >
+            </li>
+            <li class="nav-link">
+              <a href="download.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Download</a
+              >
+            </li>
+
+            <li class="nav-link active">
+              <a href="admin.html" class="d-block p-2"
+                ><i class="fa-solid fa-user"></i> Menejemen User</a
+              >
+            </li>
+            <li class="nav-link mb-5">
+              <a href="roleManagement.html" class="d-block p-2"
+                ><i class="fa-solid fa-user-cog"></i> Peran</a
+              >
+            </li>
+            <div class="pt-5">
+              <li class="nav-link mt-5">
+                <a href="index.html" class="d-block p-2"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  Keluar</a
+                >
+              </li>
             </div>
-          </div>
+          </ul>
         </div>
-        <div class="col-10">
-          <!-- navbar -->
-          <div
-            class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-5"
-          >
-            <img src="assets/logo.png" alt="" />
-            <div class="d-flex align-items-center gap-4">
-              <i class="fa-solid fa-bell fa-lg text-secondary"></i>
-              <img
-                src="https://via.placeholder.com/30"
-                alt="Avatar"
-                class="rounded-circle img-fluid"
-              />
-            </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-10">
+        <!-- navbar -->
+        <nav
+          class="navbar bg-white sticky-top shadow-sm d-flex justify-content-between align-items-center px-2 px-sm-5 w-100"
+        >
+          <img src="assets/logo.png" alt="" />
+          <div class="d-flex align-items-center gap-4">
+            <img
+              src="https://via.placeholder.com/30"
+              alt="Avatar"
+              class="rounded-circle img-fluid"
+            />
           </div>
-          <!-- content -->
-          <div class="px-5 mt-4">
-            <h5 class="fw-bold fs-4">Menejemen User</h5>
+          <button
+            class="navbar-toggler btn btn-dark d-block d-sm-block d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <i class="fas fa-bars py-2"></i>
+          </button>
+        </nav>
 
-            <div class="bg-white p-4 mt-4">
-              <h6 class="fw-bold mb-1 fs-5">Tambah Baru Admin</h6>
+        <!-- sidebar mobile -->
+        <div class="d-sm-block d-block d-md-none">
+          <nav class="navbar position-absolute">
+            <div class="container-fluid">
+              <div
+                class="offcanvas offcanvas-end bg-primary"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-body text-white sidebar-admin">
+                  <div class="d-flex align-items-center pb-4">
+                    <img src="assets/logo-sidebar.png" alt="" />
+                  </div>
+                  <ul class="list-unstyled text">
+                    <li class="nav-link active">
+                      <a href="artikelDashboard.html" class="d-block p-2">
+                        <i class="fa-solid fa-file-lines"></i> Artikel</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="ebook.html" class="d-block p-2"
+                        ><i class="fa-solid fa-book"></i> E-Book</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="uplod.html" class="d-block p-2"
+                        ><i class="fa-solid fa-upload"></i> Unggah</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="download.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Download</a
+                      >
+                    </li>
 
-              <div class="gap-4 my-4 justify-content-between">
-                <div class="d-flex row gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Full Name</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Roberto"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Username</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Username"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Contact phone</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="Phone Number"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Pasword</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="***"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Email</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="exampleFormControlInput1"
-                      placeholder="kk@email.com"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
-                  <div class="col-2">
-                    <label for="exampleFormControlInput1" class="form-label"
-                      >Permission</label
-                    >
-                  </div>
-                  <div class="col-10">
-                    <select name="permision" class="form-select" id="permision">
-                      <option value="Master-Admin" selected>
-                        Master Admin
-                      </option>
-                      <option value="Admin-Data-BPS ">Admn Data BPS</option>
-                      <option value="Non-Admin ">Non Admin</option>
-                      <option value="Admin-Data-Comtrade ">
-                        Admin Data Comtrade
-                      </option>
-                    </select>
-                  </div>
+                    <li class="nav-link">
+                      <a href="admin.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user"></i> Menejemen User</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="roleManagement.html" class="d-block p-2"
+                        ><i class="fa-solid fa-user-cog"></i> Peran</a
+                      >
+                    </li>
+                    <li class="nav-link">
+                      <a href="index.html" class="d-block p-2"
+                        ><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Keluar</a
+                      >
+                    </li>
+                  </ul>
                 </div>
               </div>
+            </div>
+          </nav>
+        </div>
+        <!-- content -->
+        <div class="px-3 px-sm-3 px-lg-5 mt-4 w-100">
+          <div class="mt-5">
+            <h5 class="fw-bold mb-4 fs-4">Menejemen User</h5>
+            <div class="d-block d-sm-block d-lg-flex gap-4">
+              <div class="bg-white col-12 gap-5 justify-content-between p-3">
+                <h6 class="fw-bold mb-1 fs-5">Tambah Baru Admin</h6>
 
-              <div class="mt-4">
-                <hr />
-                <div class="justify-content-end mt-4 text-end d-flex gap-4">
-                  <a
-                    href="#"
-                    class="btn btn-outline-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    >Discard</a
-                  >
-                  <a href="#" class="btn btn-primary" id="uplodBtn"
-                    >Save Changes</a
-                  >
-                </div>
-                <!-- Modal -->
-                <div
-                  class="modal fade"
-                  id="staticBackdrop"
-                  data-bs-backdrop="static"
-                  data-bs-keyboard="false"
-                  tabindex="-1"
-                  aria-labelledby="staticBackdropLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-dialog-centered mx-auto">
-                    <div class="modal-content text-center">
-                      <div class="modal-header te">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                          Are you sure?
-                        </h1>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        Are you sure you want to upload this file? This action
-                        cannot be undone
-                      </div>
-                      <div class="modal-footer gap-3">
-                        <button
-                          type="button"
-                          class="btn btn-outline-primary"
-                          data-bs-dismiss="modal"
+                <div class="my-4 justify-content-between">
+                  <div class="gap-4 my-4 justify-content-between">
+                    <div class="d-flex row gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Nama lengkap</label
                         >
-                          Cancel
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                          Upload
-                        </button>
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="Roberto"
+                        />
                       </div>
                     </div>
+                    <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Nama</label
+                        >
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="Username"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Handphone</label
+                        >
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="Phone Number"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Pasword</label
+                        >
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="***"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Email</label
+                        >
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="kk@email.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="d-flex row mt-4 gy-4 col-12 align-items-center">
+                      <div class="col-3 col-lg-2">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Akses</label
+                        >
+                      </div>
+                      <div class="col-9 col-lg-10">
+                        <select
+                          name="permision"
+                          class="form-select"
+                          id="permision"
+                        >
+                          <option value="Master-Admin" selected>
+                            Master Admin
+                          </option>
+                          <option value="Admin-Data-BPS ">Admn Data BPS</option>
+                          <option value="Non-Admin ">Non Admin</option>
+                          <option value="Admin-Data-Comtrade ">
+                            Admin Data Comtrade
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <hr />
+                  <div class="justify-content-end mt-4 text-end d-flex gap-4">
+                    <a href="admin.html" class="btn btn-outline-primary"
+                      >Batal</a
+                    >
+                    <a href="#" class="btn btn-primary" id="uplodBtn">Simpan</a>
                   </div>
                 </div>
               </div>
