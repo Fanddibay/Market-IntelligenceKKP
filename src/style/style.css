@@ -124,7 +124,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroMobile.png") !important;
+    background-image: url("/src/assets/heroMobile.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -344,7 +344,7 @@ button.slick-arrow {
     margin-top: 4px !important;
   }
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     margin-top: 12px !important;
     /* height: 500px !important; */
     background-size: 99% 100% !important;
@@ -402,7 +402,7 @@ button.slick-arrow {
   }
 
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100% !important;
@@ -439,7 +439,7 @@ button.slick-arrow {
 /* tablet */
 @media only screen and (min-width: 769px) and (max-width: 1023px) {
   .hero {
-    background-image: url("/assets/hero.png") !important;
+    background-image: url("/src/assets/hero.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -604,7 +604,7 @@ button.slick-arrow {
   }
   /* ebook */
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     width: 23%;
     /* height: 500px !important; */
     background-size: 100% 100% !important;
@@ -653,7 +653,7 @@ button.slick-arrow {
   /* ! Artikel css */
   /* hero css */
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -706,7 +706,7 @@ button.slick-arrow {
 
   /* hero */
   .hero {
-    background-image: url("/assets/heroTitle.png") !important;
+    background-image: url("/src/assets/heroTitle.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -895,7 +895,7 @@ button.slick-arrow {
   }
   /* ebook */
   .ebook .bg-ebook {
-    background-image: url("/assets/ebook.png");
+    background-image: url("/src/assets/ebook.png");
     width: 23%;
     /* height: 500px !important; */
     background-size: 100% 100% !important;
@@ -944,7 +944,7 @@ button.slick-arrow {
   /* ! Artikel css */
   /* hero css */
   .heroArtikel {
-    background-image: url("/assets/backgroundArtikel.png") !important;
+    background-image: url("/src/assets/backgroundArtikel.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
